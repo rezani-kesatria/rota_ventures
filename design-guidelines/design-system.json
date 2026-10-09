@@ -1,0 +1,110 @@
+{
+  "project": {
+    "client": "Rota Ventures",
+    "brief": " A corporate profile website for Rota Ventures that presents its engineering solutions, strategic leasing model, and product support lines, so potential clients and partners can understand the business and get in touch.",
+    "primaryGoal": "A clear, simple presentation of the company's services that drives visitors to make contact.",
+    "mustAvoid": "an AI slop generated design ",
+    "target": "Company site",
+    "audience": "Businesses",
+    "positioning": [
+      "Trustworthy",
+      "Minimal",
+      "Innovative",
+      "Bold",
+      "Approachable"
+    ],
+    "sections": "core sections (to define)",
+    "copy": "Have copy",
+    "stack": "Static (class-driven)",
+    "deliverable": "Production build",
+    "accessibility": "WCAG AA"
+  },
+  "designSystem": {
+    "mood": "EcoVolt",
+    "reference": {
+      "kind": "Solar energy",
+      "signature": "two-tone headlines · full bleed · inset by padding",
+      "page": "designs/solar.html",
+      "spec": "designs/solar.design-language.md",
+      "originalDesign": {
+        "by": "Irfanaffian for One Week Wonders",
+        "source": "https://dribbble.com/shots/25062959-Ecovolt-Solar-Energy-Landing-Page",
+        "note": "Study recreation — credit belongs to the original designer."
+      },
+      "rules": [
+        "LAYOUT LANGUAGE (non-negotiable):",
+        "- Conversion-led page. Everything funnels to a contact CTA, with the leasing model as the headline feature and trust-building around it.",
+        "- SIGNATURE: TWO-TONE HEADLINES. Mix dark and grey words inside the SAME sentence, the grey carrying the non-essential words. ONE deliberate grey drop per headline, not alternating bands. This device does the emphasis work bold weight normally would.",
+        "- EVERY heading sits at a LIGHT weight (500), sentence case, tight tracking — never all-caps, never bold. Hierarchy comes from scale and the two-tone device.",
+        "- Colour: white canvas, near-black ink, ONE royal-blue accent on CTAs/labels/icon badges, plus a distinct grey for the headline's second tone. Flat colour, NO gradients.",
+        "- Width: content inset from INSIDE PADDING, hard-capped at 1800px; full-bleed rules run edge to edge.",
+        "- NO MARGINS ANYWHERE. Separate everything with BORDERS and SOLID BACKGROUND BLOCKS: horizontal 1px rules between sections, vertical 1px rules between column groups. EVERY section is FULL BLEED — the light ones too — with the rules running edge to edge and only the contents padded.",
+        "- Every grid cell that collapses to full width on mobile MUST re-apply the container's inside padding at the breakpoint.",
+        "- ZERO elevation. No shadows, including under the floating nav.",
+        "- Geometry: large radius (~16-26px) on photo cards ONLY; PILL buttons; PERFECT-CIRCLE icon badges each with a small dot indicator; LARGE DASHED circular rings around stat labels with the badge overlapping the ring's base by half its own height. Structural blocks carry NO radius at all.",
+        "- Section titles sit in their own TALL full-bleed band with a circular icon button on the far right. The band's height comes from BOTTOM padding — title and button pinned to the TOP, never centred.",
+        "- Punctuate with FULL-BLEED DARK BLOCKS: partner/press bar, footer, and the closing marquee. NO rule between them — they read as ONE continuous dark field.",
+        "- Components: narrow centred pill nav (burger + wordmark, then a pill group) where the CURRENT PAGE IS A SOLID INK PILL and other items are surface chips; avatar cluster with social-proof line above the headline; OVERSIZED STAT using the two-tone device at display scale (number in accent, unit in ink); data chart built from the same hairlines and accent; column labels with a trailing accent arrow above each ring; carousel prev/next circular buttons (one accent, one ghost); TIGHT CENTRED cluster of partner logos knocked to one colour at low opacity; overlapping avatar stack beside the closing CTA; paired CTA of filled pill + circular arrow throughout; GIANT MARQUEE closing the page on the same dark field.",
+        "- The nav is STICKY and DIRECTION-AWARE (headroom): slides away on scroll-down, returns immediately on scroll-up, FULLY TRANSPARENT when stuck.",
+        "- If the reference contains a small widget whose labels are illegible, do NOT trace it. Replace it with a contextually meaningful equivalent built from the SAME tokens — keep the slot, discard the content.",
+        "- Section order: sticky nav / hero / wide photo card / about split / leasing heading band / leasing ring row / engineering row / product grid / process rows / FAQ / dark partners + footer + marquee.",
+        "- COMPONENT ANATOMY: about split = two cells of ONE full-bleed row divided by a vertical hairline (copy left, oversized stat + chart right). Leasing row = one full-bleed row cut into four cells by vertical rules — three ring columns then the CTA column; rules run full row height, cells are not cards. Partners bar, footer and marquee are ONE CONTINUOUS DARK FIELD with NO rule between them; partner logos sit as a TIGHT CENTRED CLUSTER. Closing marquee sits BELOW the footer on the same dark field at display scale.",
+        "- Ship BOTH themes; the dark blocks INVERT to light in dark mode.",
+        "MOTION (character and signature observed from the reference):",
+        "- Calm, staggered, precise. Elements arrive at partial opacity and slightly under-scale, then settle. NEVER slide far. Nothing bounces except round objects, which get a slight overshoot.",
+        "- SIGNATURE: the circular button ROLLS OUT FROM BEHIND ITS PILL — hidden behind the filled pill (lower z-index), offset left, rotated ~-300deg and under-scaled, spinning into place a beat after the pair lands. Applies to every pill + circle pair.",
+        "- Display headings rise WORD BY WORD from behind their own baseline (~42ms apart).",
+        "- Imagery WIPES open upward while settling out of a ~1.09 over-scale.",
+        "- Chart bars GROW OFF THE BASELINE: the before series sweeps first, after follows ~300ms later, the summary figure lands last.",
+        "- Rings unwind into place, then their badges land on the overshoot curve.",
+        "- Peer sets (avatars, logos, footer columns) stagger ~70ms apart in reading order.",
+        "- A live marquee ticker runs continuously. All scroll-triggered, once, disabled under prefers-reduced-motion.",
+        "- IMPLEMENTATION: never put the wipe's clip-path on the element you are observing — clip an inner child instead. Use fromTo() with explicit end values; every pre-hidden selector must be animated back and released on timeline complete. Disable all of it under prefers-reduced-motion.",
+        "BUILD MOTION WITH REAL LIBRARIES: GSAP + ScrollTrigger for reveal choreography, Lenis for smooth scroll, Motion (motion.dev) for hover/press springs.",
+        "TUNABLE: padding/gap magnitude, motion intensity, breakpoints, nav scroll behaviour.",
+        "SWAPPABLE: logo, brand name, accent hue, typeface, photography."
+      ]
+    },
+    "theme": "Both",
+    "modes": {
+      "light": {
+        "bg": "#FFFFFF",
+        "text": "#0B0B0C",
+        "primary": "#2F5BFF",
+        "accent": "#B9BDC4"
+      },
+      "dark": {
+        "bg": "#0B0B0C",
+        "text": "#FFFFFF",
+        "primary": "#B9BDC4",
+        "accent": "#2F5BFF"
+      }
+    },
+    "type": "Space Grotesk (headings) / Instrument Sans (body)",
+    "radius": {
+      "sm": 2,
+      "md": 3,
+      "lg": 4
+    },
+    "elevation": "Flat",
+    "gradient": "None",
+    "iconography": "Line",
+    "imagery": "Photo",
+    "spacing": {
+      "base": 10,
+      "scale": [
+        10,
+        20,
+        30,
+        40,
+        60,
+        80
+      ]
+    },
+    "motion": {
+      "feel": "Rich",
+      "duration": 560,
+      "reducedMotion": "respected"
+    }
+  }
+}
