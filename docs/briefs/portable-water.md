@@ -2,18 +2,18 @@
 
 ## Overview
 
-`portable-water.html` is the second leaf page under the Product Supports group. It presents Rota Ventures' deployable water and wastewater treatment systems to buyers who need industrial-grade purification at temporary or remote sites: mining camps, construction sites, disaster relief, military operations, oil & gas exploration, temporary events, agriculture, and remote industrial installations. The page uses the shared Product Supports template — badge-and-H1 hero, image grid, hairline-divided detail rows, partners band, CTA band, footer — with every CTA pointing at the footer contact form.
+`portable-water.html` is the second leaf page under the Product Supports group. It presents Rota Ventures' deployable water and wastewater treatment systems to buyers who need industrial-grade purification at temporary or remote sites: mining camps, construction sites, disaster relief, military operations, oil & gas exploration, temporary events, agriculture, and remote industrial installations. The page (refit 2026) uses the shared leaf template — eyebrow-and-two-tone-H1 hero, problem band, insight grid, benefit deck, five-step delivery rows with line-art panels, applications values, contact band, footer, marquee — with every CTA pointing at the contact band (`#contact`).
 
 ## Goals
 
 - Communicate the core promise immediately: complete, containerized treatment capacity that deploys anywhere and runs within 24–48 hours of delivery.
 - Give procurement and site teams the shortlisting numbers: 10–500 m³/day, 20' or 40' ISO containers, filtration/UV/RO/biological processes, generator-compatible 230–480V power.
 - Position the systems as the way to avoid permanent infrastructure investment for temporary needs — the entry point for the leasing conversation.
-- Conversion goal: generate enquiries through the footer form (`#contact`) via the "Get a Solution" CTA band.
+- Conversion goal: generate enquiries through the contact band (`#contact`).
 
 ## Primary CTA
 
-**Get a Solution**, targeting the footer contact form (`#contact`). The header carries the same destination as "Contact Us". The CTA band uses the standard white-on-ink band, not the green variant.
+**Send message** in the contact band (`#contact`), a mailto handoff with the interest select pre-set to "A product support line". The header carries the same destination as "Contact". There is no separate CTA band; the contact band closes the page like the other refit leaves.
 
 ## Key Messages
 
@@ -27,13 +27,14 @@
 
 | Order | Section | Content summary | Notes |
 |---|---|---|---|
-| 1 | Site header | Logo; nav: Home, How It Works, Strategic Leasing; Engineering Solutions dropdown (2 pages); Product Supports dropdown (6 pages); Contact Us button | Shared chrome on all 11 pages |
-| 2 | Page hero | Badge "Product Supports"; H1 "Portable Water & Wastewater"; lead on reliable water management and filtration in remote or temporary industrial environments | Narrow container |
-| 3 | Image grid | Three photos: water treatment facility, industrial water systems, water management technology | All three hotlinked from Unsplash |
-| 4 | Detail rows | Description; Category (Water Treatment · Portable Systems · Environmental Solutions); Technical Specifications (capacity, configuration, processes, power); Benefits (5 items); Applications; Support Services (5 items) | `detail-list` of six hairline rows; Specifications and Support Services carry the page-specific weight where a generic "How It Works" row would sit |
-| 5 | Partners band | "Trusted by Industry Leaders" with five logos (partner-1, -2, -3, -5, -6) | Dark block |
-| 6 | CTA band | H2 "Need Reliable Water Solutions Anywhere?"; supporting line; "Get a Solution" button | Standard `cta-band` |
-| 7 | Footer | Brand blurb, quick links, address/email/phone, contact form, legal links | Carries the `#contact` anchor |
+| 1 | Site header | Glass nav: burger, wordmark, chips (Home, How It Works, Strategic Leasing), Engineering Solutions dropdown (2 pages), Product Supports dropdown (6 pages, this page `aria-current`), theme toggle, Contact pill | Shared chrome on all 11 pages |
+| 2 | Page hero | Eyebrow "Product Supports"; two-tone H1 "Portable Water *& Wastewater.*"; lead on containerised plants that travel | Word-rise entrance |
+| 3 | The Problem band + insight grid | Two copy cells ("No grid, no plant, no exceptions", "A treatment plant in a box") alternating with two photos | Local images: `leasing-5` (treatment vessels), `vision-7` (water channel) |
+| 4 | The Outcome benefit deck | Self-looping three-tab carousel: Live in 24–48 hours; Moves with the site; Compliant anywhere — chips over photos (24–48h, 20' · 40', 24/7) | Panels: `leasing-1`, `hero-2`, `vision-4`; operable without JS |
+| 5 | Delivery band + five steps | 01 Water assessment, 02 Container configuration, 03 Delivery & siting, 04 Commissioning, 05 Operation & support | Each step copy-left, decorative line-art SVG panel right |
+| 6 | Applications values | Three icon-badge cells: mining camps & construction; disaster relief & military; events, agriculture & remote industry | From the old Applications row |
+| 7 | Contact band | H2 "Water, anywhere, *to standard.*"; five-field form (interest pre-set to "A product support line"); mailto handoff | Carries the `#contact` anchor |
+| 8 | Footer + marquee | Brand blurb, quick links, address/email/phone, legal links; closing marquee ticker | Shared with the other refit pages |
 
 ## SEO
 
@@ -50,21 +51,15 @@
 
 ## Assets
 
-- **Hero grid images (3):** hotlinked from `images.unsplash.com` — a production issue. Localize under `assets/img/products/portable-water-1.jpg` through `-3.jpg` and reference relatively.
-- **Image reuse:** `photo-1774019883172-a89730a86500` also appears on `economical-pumping.html`; replace one instance so the two pages do not share a lead image.
-- **Partner logos (5):** local under `assets/img/` (partner-1, -2, -3, -5, -6); partner-4 omitted — confirm intentional.
+- **Imagery (5):** all local — insight: `assets/img/leasing-5.png`, `assets/img/vision-7.png`; benefit panels: `leasing-1`, `hero-2`, `vision-4`. The old Unsplash hotlinks are gone.
 - **Logo:** local, `assets/img/logo.png`.
 - When available, add photography of actual containerized units and field deployments; current stock reads generic.
 
 ## Design Notes
 
-Apply the EcoVolt language from `design-guidelines/design-system.json`:
+Implemented in the refit (2026), matching `css/home.css` + `css/page.css`:
 
-- **Two-tone H1:** set "Portable" in the grey second tone and keep "Water & Wastewater" in ink — "<span grey>Portable</span> Water & Wastewater". The grey drop carries the qualifier, which the lead ("Deployable…") and the "Flexible Mobility" benefit restate; the ink words name the service domain. 500 weight, sentence case, tight tracking.
-- **Hero badge:** "Product Supports" pill with its dot indicator.
-- **Image grid:** three large-radius photo cards (~16–26px), opening with the upward wipe.
-- **Detail rows:** full-bleed hairline-divided rows — label left, content right, rules edge to edge; no elevation.
-- **Benefit icons:** the five Benefits items suit circular line-icon badges with dot indicators (deployment, mobility, completeness, compliance, cost).
-- **Tall heading band:** a band above the detail list — title pinned top with the circular icon button far right — would give the specifications block a proper stage without new copy.
-- **CTA pair:** "Get a Solution" as a filled pill plus circular arrow, the circle rolling out from behind the pill.
-- **Dark field:** partners band, footer, and closing marquee as one continuous dark block; partner logos as a tight centred low-opacity cluster.
+- **Two-tone H1:** "Portable Water" in ink, "& Wastewater." in the grey tone.
+- **Benefit deck:** the vertical tab carousel with self-looping dwell, progress bar, dots and arrows; chips ("24–48h", "20' · 40'", "24/7") land as accent blocks over the panel photos. All numbers come from the page's own copy.
+- **Steps:** copy left (number, heading, one-line lead, three proof bullets), line-art SVG panel right — source survey, treatment train, site arrival, quality check, uptime log. Panels `aria-hidden`, theme-token strokes.
+- **Contact band:** dark field, five-field form, pill submit with bloom hover; local validation, mailto handoff.

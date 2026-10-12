@@ -2,18 +2,18 @@
 
 ## Overview
 
-`specialized-cables.html` is a Product Supports leaf page presenting Rota Ventures' specialized cabling line: high-durability cables engineered to survive extreme mechanical stress, heat, and chemical exposure in hazardous industrial zones. It serves electrical and instrumentation engineers, maintenance leads, and project procurement in the harshest environments — refineries, offshore platforms, mines, steel mills — who need cable that will not fail where standard product would. The page shares the Product Supports template (badge + H1 hero, image grid, hairline detail rows, partners band, CTA band, dark footer) with the other five product pages, and carries the group's largest partners band (four logos).
+`specialized-cables.html` is a Product Supports leaf page presenting Rota Ventures' specialized cabling line: high-durability cables engineered to survive extreme mechanical stress, heat, and chemical exposure in hazardous industrial zones. It serves electrical and instrumentation engineers, maintenance leads, and project procurement in the harshest environments — refineries, offshore platforms, mines, steel mills — who need cable that will not fail where standard product would. The page (refit 2026) shares the leaf template (eyebrow + two-tone H1 hero, problem band, insight grid, specification values, five-step delivery rows with line-art panels, applications values, contact band, dark footer, marquee) with the other five product pages.
 
 ## Goals
 
 - Convince technically sceptical buyers with hard specifications: 250°C continuous rating, ATEX/IECEx hazardous-area certification, 5–10x lifespan versus standard cable.
 - Show breadth across five cable families so buyers self-identify their application (high-temperature, chemical-resistant, armored, explosion-proof, flexible).
 - Sell total cost of ownership, not unit price: fewer replacements, lower maintenance, less unplanned downtime.
-- Convert visits into a cable-selection conversation via the CTA band and the footer contact form (`#contact`).
+- Convert visits into a cable-selection conversation via the contact band (`#contact`).
 
 ## Primary CTA
 
-**Find Your Cable Solution** — the CTA band button, targeting `#contact` (the footer contact form). The header "Contact Us" pill points to the same anchor.
+**Send message** in the contact band (`#contact`), a mailto handoff with the interest select pre-set to "A product support line". The header "Contact" pill points to the same anchor. There is no separate CTA band.
 
 ## Key Messages
 
@@ -27,13 +27,14 @@
 
 | Order | Section | Content summary | Notes |
 |---|---|---|---|
-| 1 | Site header | Logo, primary nav (Home, How It Works, Strategic Leasing) plus Engineering Solutions and Product Supports dropdowns, Contact Us pill | Product Supports dropdown lists all six sibling pages |
-| 2 | Page hero | "Product Supports" badge, H1 "Specialized Cables", lead on withstanding extreme mechanical stress, heat, and chemical exposure | Lead duplicates the meta description verbatim |
-| 3 | Image grid | Three photos: industrial cable systems, cable control systems, high-performance wiring | Currently hotlinked from Unsplash — see Assets |
-| 4 | Detail rows | Description · Category · Cable Types · Benefits · Applications · Support Services | Six rows. "Cable Types" fills the template's "How It Works" slot; "Support Services" is an additional row, and Benefits carries six items (the group's longest). Category line: "Product Supports · Electrical Systems · Hazardous Environment · Industrial Cables" |
-| 5 | Partners band | "Trusted by Industry Leaders" heading with partner-1, partner-2, partner-5, and partner-6 logos | Four logos — the largest subset in the Product Supports group |
-| 6 | CTA band | "Protect Your Critical Infrastructure", reliability pitch line, "Find Your Cable Solution" button | Sits directly above the footer |
-| 7 | Footer | Brand blurb, quick links, Bandar Baru Bangi address, email, phone, contact form, legal row | Carries the `#contact` anchor target |
+| 1 | Site header | Glass nav: burger, wordmark, chips (Home, How It Works, Strategic Leasing), Engineering Solutions dropdown (2 pages), Product Supports dropdown (6 pages, this page `aria-current`), theme toggle, Contact pill | Product Supports dropdown lists all six sibling pages |
+| 2 | Page hero | Eyebrow "Product Supports", two-tone H1 "Specialized *Cables.*", lead on surviving mechanical stress, heat, and chemical exposure | Word-rise entrance |
+| 3 | The Problem band + insight grid | Two copy cells ("The environment takes the weakest link", "Cable built for the zone") alternating with two photos | Local images: `hero-2` (plant machinery), `vision-5` (petrochemical complex) |
+| 4 | The Specification values | Three hairline cells: 5–10× lifespan; 250°C continuous rating; ATEX · IECEx certification (with remote-operations text-link) | The page's own numbers, now display-scale stats |
+| 5 | Delivery band + five steps | 01 Application review, 02 Selection & custom build, 03 Installation guidance, 04 Testing & certification, 05 Emergency stock & support | The five cable families are carried in step 02 copy; each step copy-left, decorative line-art SVG panel right (zone plan, cross-section, pull plan, test bench, spares shelf) |
+| 6 | Applications values | Three icon-badge cells: refineries & offshore platforms; mines & steel mills; power & hazardous zones | From the old Applications row |
+| 7 | Contact band | H2 "Cables that outlive *their environment.*"; five-field form (interest pre-set to "A product support line"); mailto handoff | Carries the `#contact` anchor |
+| 8 | Footer + marquee | Brand blurb, quick links, Bandar Baru Bangi address, email, phone, legal row; closing marquee ticker | Shared with the other refit pages |
 
 ## SEO
 
@@ -49,19 +50,15 @@
 
 ## Assets
 
-- **Production issue — Unsplash hotlinking:** all three grid images load from `images.unsplash.com` URLs. Replace with local assets under `assets/img/` (e.g. `specialized-cables-1/2/3.jpg`) so imagery is stable, licensed, and performance-budgeted.
-- Two of the three images are shared with Specialized Pumping — dedupe and differentiate during the asset pass; cable-specific photography should show armoured runs, glands, and hazardous-area installations.
-- `assets/img/logo.png` (header and footer), `assets/img/partner-1.png`, `partner-2.png`, `partner-5.png`, `partner-6.png` (partners band) are already local.
+- **Imagery (2):** both local — `assets/img/hero-2.png` (plant machinery) and `assets/img/vision-5.png` (petrochemical complex). The old Unsplash hotlinks are gone.
+- Cable-specific photography (armoured runs, glands, hazardous-area installations) still wanted — no such assets exist locally yet.
+- `assets/img/logo.png` (header and footer) is local.
 
 ## Design Notes
 
-Applying the EcoVolt design language from `design-guidelines/design-system.json`:
+Implemented in the refit (2026), matching `css/home.css` + `css/page.css`:
 
-- **Two-tone H1:** set "Specialized Cables" with **"Specialized" in grey** (`#B9BDC4`) and **"Cables" in near-black ink** — the descriptor takes the single grey drop, the essential noun stays ink (mirroring the Specialized Pumping treatment for template consistency). Weight 500, sentence case, tight tracking, word-by-word rise on entry.
-- **Hero badge:** "Product Supports" becomes a pill chip; a circular line-icon badge with its dot indicator (a cable/bolt glyph) can sit above the H1.
-- **Image grid:** the three photos become large-radius (~16–26px) photo cards — the only rounded elements — wiping open upward from ~1.09 over-scale on scroll.
-- **Detail rows:** rebuild the six rows as full-bleed hairline-divided rows with a vertical hairline between label and body on desktop. The five Cable Types suit small circular icon badges with dot indicators (temperature, chemical, armour, certification, flex); the six-item Benefits row stays scannable because each hairline row holds one idea.
-- **Heading band:** open the detail list with a tall full-bleed band — title pinned top, circular icon button far right — reusing the page's positioning line ("When standard electrical cables fail…").
-- **Paired CTA:** "Find Your Cable Solution" becomes a filled royal-blue pill (`#2F5BFF`) paired with a circular arrow button that rolls out from behind the pill (~-300°, under-scaled, one beat late). Apply the same pair to the header Contact pill.
-- **Dark field:** partners band, footer, and the closing marquee read as ONE continuous dark block with no internal rules; the four partner logos sit as a tight centred cluster knocked to one colour at low opacity. Inverts to light in dark mode.
-- **Discipline:** flat colour only, zero shadows, no gradients, no margins — separation comes exclusively from hairline rules and solid background blocks, capped at 1800px content width.
+- **Two-tone H1:** "Specialized" in ink, "Cables." in the grey tone; word-by-word rise on entry.
+- **Specification stats:** 5–10× / 250°C / ATEX · IECEx as three hairline value cells, numbers at display scale in accent.
+- **Steps:** copy left (number, heading, one-line lead, three proof bullets), decorative line-art SVG panel right — zone plan, cable cross-section, pull plan, test bench, spares shelf. Panels `aria-hidden`, theme-token strokes.
+- **Contact band:** dark field, five-field form, pill submit with bloom hover; local validation, mailto handoff.

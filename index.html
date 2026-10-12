@@ -22,6 +22,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/home.css">
+  <script>
+    (function () {
+      try {
+        var a = new URLSearchParams(location.search).get("accent");
+        if (!a) return;
+        document.documentElement.setAttribute("data-accent", a);
+        var l = document.createElement("link");
+        l.rel = "stylesheet";
+        l.href = "css/accent-test.css";
+        document.head.appendChild(l);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -38,9 +51,25 @@
         <div class="nav-menu">
           <a class="chip is-current" href="index.html" aria-current="page">Home</a>
           <a class="chip" href="how-it-works.html">How It Works</a>
-          <a class="chip" href="strategic-leasing.html">Leasing</a>
-          <a class="chip" href="#solutions">Solutions</a>
-          <a class="chip" href="#products">Products</a>
+          <a class="chip" href="strategic-leasing.html">Strategic Leasing</a>
+          <div class="chip nav-dd">
+            <button class="nav-dd-toggle" type="button" aria-expanded="false" aria-haspopup="true">Engineering Solutions<span class="nav-dd-caret" aria-hidden="true"></span></button>
+            <div class="nav-dd-menu">
+              <a href="combined-head-power.html">Combined Heat &amp; Power</a>
+              <a href="industrial-remote-operations.html">Industrial Remote Operations</a>
+            </div>
+          </div>
+          <div class="chip nav-dd">
+            <button class="nav-dd-toggle" type="button" aria-expanded="false" aria-haspopup="true">Product Supports<span class="nav-dd-caret" aria-hidden="true"></span></button>
+            <div class="nav-dd-menu">
+              <a href="biomethane-compression.html">Biomethane Green Compression</a>
+              <a href="portable-water.html">Portable Water &amp; Wastewater</a>
+              <a href="economical-pumping.html">Economical Pumping &amp; Compression</a>
+              <a href="specialized-pumping.html">Specialized Pumping</a>
+              <a href="water-matters.html">Water Matters</a>
+              <a href="specialized-cables.html">Specialized Cables</a>
+            </div>
+          </div>
         </div>
         <div class="nav-actions">
           <button class="theme-toggle" type="button" aria-label="Switch colour theme">

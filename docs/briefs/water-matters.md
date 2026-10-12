@@ -2,18 +2,18 @@
 
 ## Overview
 
-`water-matters.html` is a Product Supports leaf page presenting Water Matters, Rota Ventures' holistic industrial water stewardship service. Unlike the equipment-led sibling pages, this line is consulting-plus-systems: water auditing, treatment design, smart monitoring, and zero liquid discharge, wrapped in strategic planning. It serves operations directors, ESG and sustainability leads, and plant owners in water-intensive industries who face rising water costs, discharge regulation, and scarcity risk. The page shares the Product Supports template (badge + H1 hero, image grid, hairline detail rows, partners band, CTA band, dark footer) with the other five product pages, and carries the group's only green CTA band variant.
+`water-matters.html` is a Product Supports leaf page presenting Water Matters, Rota Ventures' holistic industrial water stewardship service. Unlike the equipment-led sibling pages, this line is consulting-plus-systems: water auditing, treatment design, smart monitoring, and zero liquid discharge, wrapped in strategic planning. It serves operations directors, ESG and sustainability leads, and plant owners in water-intensive industries who face rising water costs, discharge regulation, and scarcity risk. The page (refit 2026) shares the leaf template (eyebrow + two-tone H1 hero, problem band, insight grid, outcome values, five-step delivery rows with line-art panels, applications values, contact band, dark footer, marquee) with the other five product pages.
 
 ## Goals
 
 - Reframe water from a fixed utility cost into a manageable resource with measurable savings, opening a consulting engagement rather than a one-off equipment sale.
 - Quantify the value proposition up front: 40–70% reduction in freshwater intake through recycling and optimization.
 - Address the compliance and ESG buyer alongside the cost buyer — regulatory compliance, risk mitigation, and sustainability reporting are named benefits.
-- Convert visits into a low-commitment first step: the CTA invites a water audit, not a purchase.
+- Convert visits into a low-commitment first step: the contact band copy invites a water audit, not a purchase.
 
 ## Primary CTA
 
-**Start Your Water Audit** — the CTA band button (`btn-white btn-white-green` on the green band variant), targeting `#contact` (the footer contact form). The header "Contact Us" pill points to the same anchor.
+**Send message** in the contact band (`#contact`), a mailto handoff with the interest select pre-set to "A product support line"; the band copy opens with the audit framing. The header "Contact" pill points to the same anchor. The old green CTA band variant is gone with the refit — the page now closes with the shared contact band.
 
 ## Key Messages
 
@@ -27,13 +27,14 @@
 
 | Order | Section | Content summary | Notes |
 |---|---|---|---|
-| 1 | Site header | Logo, primary nav (Home, How It Works, Strategic Leasing) plus Engineering Solutions and Product Supports dropdowns, Contact Us pill | Product Supports dropdown lists all six sibling pages |
-| 2 | Page hero | "Product Supports" badge, H1 "Water Matters", lead on sustainability, recycling, and intelligent optimization of industrial water usage | Lead duplicates the meta description verbatim |
-| 3 | Image grid | Three photos: water resource management, water treatment equipment, sustainable water solutions | Currently hotlinked from Unsplash — see Assets |
-| 4 | Detail rows | Description · Category · Service Components · Benefits · Applications · Support Services | Six rows. "Service Components" fills the template's "How It Works" slot; "Support Services" is an additional row. Category line: "Product Supports · Water Management · Sustainability · Resource Optimization" |
-| 5 | Partners band | "Trusted by Industry Leaders" heading with partner-1, partner-2, and partner-3 logos | Logo subset differs from sibling pages |
-| 6 | CTA band (green variant) | "Make Water Work for Your Business", partnership pitch line, "Start Your Water Audit" button | Only page in the group using the `cta-band green` variant |
-| 7 | Footer | Brand blurb, quick links, Bandar Baru Bangi address, email, phone, contact form, legal row | Carries the `#contact` anchor target |
+| 1 | Site header | Glass nav: burger, wordmark, chips (Home, How It Works, Strategic Leasing), Engineering Solutions dropdown (2 pages), Product Supports dropdown (6 pages, this page `aria-current`), theme toggle, Contact pill | Product Supports dropdown lists all six sibling pages |
+| 2 | Page hero | Eyebrow "Product Supports", two-tone H1 "Water *Matters.*", lead on auditing, treatment design, smart monitoring and ZLD | Word-rise entrance |
+| 3 | The Problem band + insight grid | Two copy cells ("Two invoices, one resource", "One resource, managed") alternating with two photos | Local images: `vision-7` (managed water channel), `leasing-1` (facility) |
+| 4 | The Outcome values | Three hairline cells: 40–70% less freshwater drawn; 0 liquid discharge (ZLD); 24/7 live quality monitoring | The page's own numbers, now display-scale stats |
+| 5 | Delivery band + five steps | 01 Water audit, 02 Strategy & treatment design, 03 Smart monitoring, 04 Recycling & ZLD build-out, 05 Reporting & stewardship | The four service components (auditing, treatment design, monitoring, ZLD) are carried in steps 01–04; each step copy-left, decorative line-art SVG panel right |
+| 6 | Applications values | Three icon-badge cells: manufacturing & power generation; mining & textiles; food, chemical & automotive | From the old Applications row |
+| 7 | Contact band | H2 "Make water *accountable.*"; five-field form (interest pre-set to "A product support line"); mailto handoff | Carries the `#contact` anchor |
+| 8 | Footer + marquee | Brand blurb, quick links, Bandar Baru Bangi address, email, phone, legal row; closing marquee ticker | Shared with the other refit pages |
 
 ## SEO
 
@@ -49,19 +50,14 @@
 
 ## Assets
 
-- **Production issue — Unsplash hotlinking:** all three grid images load from `images.unsplash.com` URLs. Replace with local assets under `assets/img/` (e.g. `water-matters-1/2/3.jpg`) so imagery is stable, licensed, and performance-budgeted.
-- One of the three images is shared with Specialized Pumping — dedupe and differentiate during the asset pass.
-- `assets/img/logo.png` (header and footer), `assets/img/partner-1.png`, `partner-2.png`, `partner-3.png` (partners band) are already local.
+- **Imagery (2):** both local — `assets/img/vision-7.png` (managed water channel) and `assets/img/leasing-1.png` (production facility). The old Unsplash hotlinks are gone.
+- `assets/img/logo.png` (header and footer) is local.
 
 ## Design Notes
 
-Applying the EcoVolt design language from `design-guidelines/design-system.json`:
+Implemented in the refit (2026), matching `css/home.css` + `css/page.css`:
 
-- **Two-tone H1:** set "Water Matters" with **"Water" in near-black ink** and **"Matters" in grey** (`#B9BDC4`) — the subject stays ink, the single grey drop falls on the verb so the eye lands on what the page is about. Weight 500, sentence case, tight tracking, word-by-word rise on entry.
-- **Hero badge:** "Product Supports" becomes a pill chip; a circular line-icon badge with its dot indicator (a droplet glyph) can sit above the H1.
-- **Image grid:** the three photos become large-radius (~16–26px) photo cards — the only rounded elements — wiping open upward from ~1.09 over-scale on scroll.
-- **Detail rows:** rebuild the six rows as full-bleed hairline-divided rows with a vertical hairline between label and body on desktop; the four Service Components suit small circular icon badges with dot indicators (audit, treatment, monitoring, discharge).
-- **Heading band:** open the detail list with a tall full-bleed band — title pinned top, circular icon button far right — reusing the lead's framing ("Holistic water resource management…").
-- **Paired CTA:** "Start Your Water Audit" becomes a filled pill paired with a circular arrow button that rolls out from behind the pill (~-300°, under-scaled, one beat late). The green band is a deviation from the single-accent rule: either document it as a flat, gradient-free section accent or remap the band to ink with the royal-blue paired CTA — it must not gain gradients either way.
-- **Dark field:** partners band, footer, and the closing marquee read as ONE continuous dark block with no internal rules; the three partner logos sit as a tight centred cluster knocked to one colour at low opacity. Inverts to light in dark mode.
-- **Discipline:** flat colour only, zero shadows, no gradients, no margins — separation comes exclusively from hairline rules and solid background blocks, capped at 1800px content width.
+- **Two-tone H1:** "Water" in ink, "Matters." in the grey tone; word-by-word rise on entry.
+- **Outcome stats:** 40–70% / 0 (ZLD) / 24/7 as three hairline value cells, numbers at display scale in accent.
+- **Steps:** copy left (number, heading, one-line lead, three proof bullets), decorative line-art SVG panel right — site water map, recycle loop, live balance, recovery ramp, stewardship report. Panels `aria-hidden`, theme-token strokes.
+- **Contact band:** dark field, five-field form, pill submit with bloom hover; local validation, mailto handoff. The green band variant no longer exists sitewide.

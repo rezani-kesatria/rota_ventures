@@ -30,8 +30,9 @@ The Strategic Leasing page (`strategic-leasing.html`) is the commercial heart of
 | 1 | Page hero | "Strategic Leasing" badge; long two-clause H1 on bridging technical necessity and financial flexibility; lead paragraph on the time value of money and redeployed capital. | Narrow centred container. |
 | 2 | The Leasing Insight | Two alternating text/image blocks: "Why own the asset when you only need the output?" (CAPEX versus the leasing pivot) and "What would be the result?" (releasing cash stuck in operations, redeploying it). | Images currently hotlinked from Unsplash — see Assets. |
 | 3 | How Strategic Leasing Benefits You | Four benefit boxes, each a heading, a summary line, and a two-column proof pair: Zero Upfront Costs (Immediate Access / Preserved Working Capital), 100% Tax Benefits (Operational Expense Deduction / Simplified Accounting), Fixed Payments (Predictable Budgeting / Inflation Protection), Latest Technology (Easy Upgrades / Competitive Advantage). | "Soft" background section, centred heading. |
-| 4 | CTA band | "Ready to Transform Your Infrastructure Investment?" plus a supporting line and the "Schedule a Consultation" button. | Last conversion point before the footer. |
-| 5 | Footer | Dark footer field carrying `#contact`: brand blurb, quick links, address/email/phone, contact form. | Shared component on all 11 pages. |
+| 4 | Customer Testimony | Three placeholder quotes in ruled cells ("Customer Name / Role — Company Name") with a placeholder notice in the band head; sits between the benefit deck and the FAQ. | PRODUCT.md forbids invented testimonials — replace placeholders with real client words and attributions before launch. |
+| 5 | CTA band | "Ready to Transform Your Infrastructure Investment?" plus a supporting line and the "Schedule a Consultation" button. | Last conversion point before the footer. |
+| 6 | Footer | Dark footer field carrying `#contact`: brand blurb, quick links, address/email/phone, contact form. | Shared component on all 11 pages. |
 
 ## SEO
 

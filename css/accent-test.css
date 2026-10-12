@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Accent colour test harness — loads only with ?accent=<name> on index.html
+   Production accent is leaf green (#44821f), folded into css/home.css.
+   Variants kept for the client colour review (see docs/color-variants-backlog.md):
+   sky · cyan · petrol · mono   (leaf override also still resolves, no-op)
+   Every value passes WCAG AA in both themes:
+   - petrol  #1c576e  7.9:1 on white · white-on-fill 7.9:1 · dark tint #7fb0c8 8.0:1
+   - sky     #0b9bd6 fill 3.2:1 white glyphs · text #0369a1 5.9:1 · dark text #38bdf8 8.8:1
+   - cyan    #0891b2 fill 3.7:1 white glyphs · text #0e7490 5.4:1 · dark text #22d3ee 10.5:1
+   - mono    #0b0b0c 21:1          · dark fill #b9bdc4 w/ ink glyph 10:1
+   ========================================================================== */
+
+/* ---- petrol: brand wordmark teal ---------------------------------------- */
+
+[data-accent="petrol"] {
+  --accent: #1c576e;
+  --accent-ink: #1c576e;
+}
+[data-accent="petrol"][data-theme="dark"] {
+  --accent: #1c576e;
+  --accent-ink: #7fb0c8;
+}
+[data-accent="petrol"] .field { --accent-ink: #7fb0c8; }
+[data-accent="petrol"][data-theme="dark"] .field { --accent-ink: #1c576e; }
+[data-accent="petrol"] .pill-bloom i:nth-child(1) { background: #4e8fae; }
+[data-accent="petrol"] .pill-bloom i:nth-child(2) { background: #7fb0c8; }
+[data-accent="petrol"] .mobile-menu-inner a[aria-current="page"] { color: #7fb0c8; }
+
+/* ---- leaf: brand green, AA-darkened -------------------------------------- */
+
+[data-accent="leaf"] {
+  --accent: #44821f;
+  --accent-ink: #44821f;
+}
+[data-accent="leaf"][data-theme="dark"] {
+  --accent: #44821f;
+  --accent-ink: #6db944;
+}
+[data-accent="leaf"] .field { --accent-ink: #85bf55; }
+[data-accent="leaf"][data-theme="dark"] .field { --accent-ink: #3d7419; }
+[data-accent="leaf"] .pill-bloom i:nth-child(1) { background: #6db944; }
+[data-accent="leaf"] .pill-bloom i:nth-child(2) { background: #a3d17c; }
+[data-accent="leaf"] .mobile-menu-inner a[aria-current="page"] { color: #85bf55; }
+
+/* ---- sky: bright azure, 500-tone fill + 700-tone text -------------------- */
+/* fill #0b9bd6 3.2:1 white glyphs · text #0369a1 5.9:1 · dark text #38bdf8 8.8:1 */
+
+[data-accent="sky"] {
+  --accent: #0b9bd6;
+  --accent-ink: #0369a1;
+}
+[data-accent="sky"][data-theme="dark"] {
+  --accent: #0b9bd6;
+  --accent-ink: #38bdf8;
+}
+[data-accent="sky"] .field { --accent-ink: #38bdf8; }
+[data-accent="sky"][data-theme="dark"] .field { --accent-ink: #0369a1; }
+[data-accent="sky"] .pill-bloom i:nth-child(1) { background: #7dd3fc; }
+[data-accent="sky"] .pill-bloom i:nth-child(2) { background: #38bdf8; }
+[data-accent="sky"] .mobile-menu-inner a[aria-current="page"] { color: #38bdf8; }
+
+/* ---- cyan: brand petrol hue brightened to 500/600 tone ------------------- */
+/* fill #0891b2 3.7:1 white glyphs · text #0e7490 5.4:1 · dark text #22d3ee 10.5:1 */
+
+[data-accent="cyan"] {
+  --accent: #0891b2;
+  --accent-ink: #0e7490;
+}
+[data-accent="cyan"][data-theme="dark"] {
+  --accent: #0891b2;
+  --accent-ink: #22d3ee;
+}
+[data-accent="cyan"] .field { --accent-ink: #22d3ee; }
+[data-accent="cyan"][data-theme="dark"] .field { --accent-ink: #0e7490; }
+[data-accent="cyan"] .pill-bloom i:nth-child(1) { background: #67e8f9; }
+[data-accent="cyan"] .pill-bloom i:nth-child(2) { background: #22d3ee; }
+[data-accent="cyan"] .mobile-menu-inner a[aria-current="page"] { color: #22d3ee; }
+
+/* ---- mono: ink only, no hue past zero ------------------------------------ */
+
+[data-accent="mono"] {
+  --accent: #0b0b0c;
+  --accent-ink: #0b0b0c;
+}
+[data-accent="mono"][data-theme="dark"] {
+  --accent: #b9bdc4;
+  --accent-ink: #b9bdc4;
+}
+[data-accent="mono"] .field { --accent-ink: #b9bdc4; }
+[data-accent="mono"][data-theme="dark"] .field { --accent-ink: #0b0b0c; }
+[data-accent="mono"] .pill-bloom i:nth-child(1) { background: #4d525a; }
+[data-accent="mono"] .pill-bloom i:nth-child(2) { background: #8e939c; }
+[data-accent="mono"] .mobile-menu-inner a[aria-current="page"] { color: #b9bdc4; }
+
+/* dark-theme mono fills turn silver: flip hardcoded white glyphs to ink */
+[data-accent="mono"][data-theme="dark"] .icon-badge.about-badge,
+[data-accent="mono"][data-theme="dark"] .circle-btn:hover,
+[data-accent="mono"][data-theme="dark"] .ring-badge,
+[data-accent="mono"][data-theme="dark"] .faq-item.open .faq-icon,
+[data-accent="mono"][data-theme="dark"] .avatars span:nth-child(3) { color: #0b0b0c; }
+
+[data-accent="mono"][data-theme="dark"] .pair:hover .pair-pill,
+[data-accent="mono"][data-theme="dark"] .pair:focus-visible .pair-pill,
+[data-accent="mono"][data-theme="dark"] .product-cell:hover,
+[data-accent="mono"][data-theme="dark"] .product-cell:focus-within { color: #0b0b0c; }
+
+[data-accent="mono"][data-theme="dark"] .product-cell:hover h3 a,
+[data-accent="mono"][data-theme="dark"] .product-cell:hover p,
+[data-accent="mono"][data-theme="dark"] .product-cell:hover .icon-badge,
+[data-accent="mono"][data-theme="dark"] .product-cell:hover .cell-arrow,
+[data-accent="mono"][data-theme="dark"] .product-cell:focus-within h3 a,
+[data-accent="mono"][data-theme="dark"] .product-cell:focus-within p,
+[data-accent="mono"][data-theme="dark"] .product-cell:focus-within .icon-badge,
+[data-accent="mono"][data-theme="dark"] .product-cell:focus-within .cell-arrow { color: #0b0b0c; }
+
+[data-accent="mono"][data-theme="dark"] ::selection { color: #0b0b0c; }

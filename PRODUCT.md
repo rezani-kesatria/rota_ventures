@@ -30,9 +30,9 @@ B2B evaluation: visitors compare against outright purchase and other leasing ven
 
 - 11 static pages: home, how-it-works, strategic-leasing, 2 engineering solutions, 6 product support lines.
 - Contact form has no backend; it validates locally and hands off to the visitor's email client.
-- Partner logos are placeholder-quality PNGs (`assets/img/partner-*.png`); photography exists locally for the home page (`hero-*.png`, `vision-*.png`, `leasing-*.png`, `engineering-*.png`) but leaf pages hotlink Unsplash images (known production defect, out of scope unless asked).
+- Partner logos are placeholder-quality PNGs (`assets/img/partner-*.png`); all page photography is local under `assets/img/` — the old Unsplash hotlinks were removed during the 2026 inner-page refit (home, How It Works, Strategic Leasing, both Engineering Solutions, all six Product Supports). Stock imagery is generic; product-accurate photography is still wanted.
 - Site naming defect on record: pages say "Combined Head & Power" where the product is Combined Heat & Power.
-- No real customer names, testimonials, pricing, or benchmarks exist; none may be invented.
+- No real customer names, testimonials, pricing, or benchmarks exist; none may be invented. The Strategic Leasing page carries an approved placeholder testimony section (three clearly marked placeholder quotes) pending real client quotes.
 
 ## Brand Commitments
 

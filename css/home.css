@@ -1,7 +1,7 @@
 /* ==========================================================================
    Rota Ventures — Home
    World: EcoVolt adaptation (design-guidelines/design-system.json)
-   White paper ground · near-black ink · one royal-blue instrument accent
+   White paper ground · near-black ink · one leaf-green instrument accent
    Hairline-ruled full-bleed sheet · flat · pill + circle controls
    ========================================================================== */
 
@@ -12,8 +12,8 @@
   --ink: #0b0b0c;
   --ink-soft: #4d525a;
   --tone: #8e939c;
-  --accent: #2f5bff;
-  --accent-ink: #2f5bff;
+  --accent: #44821f;
+  --accent-ink: #44821f;
   --line: #e4e6e9;
   --line-strong: #b9bdc4;
   --chip: #f1f2f4;
@@ -53,8 +53,8 @@
   --ink: #ffffff;
   --ink-soft: #b4b8bf;
   --tone: #b9bdc4;
-  --accent: #2f5bff;
-  --accent-ink: #6e8bff;
+  --accent: #44821f;
+  --accent-ink: #6db944;
   --line: #26282c;
   --line-strong: #3a3d42;
   --chip: #17181b;
@@ -289,6 +289,90 @@ p { max-width: 68ch; }
   color: var(--pill-ink-fg);
 }
 
+/* nav dropdowns (Engineering Solutions / Product Supports) */
+
+.nav-dd {
+  position: relative;
+  padding: 0;
+}
+
+.nav-dd-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  height: 100%;
+  padding: 0 22px;
+  background: none;
+  border: 0;
+  font: inherit;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.nav-dd-toggle:hover,
+.nav-dd:hover .nav-dd-toggle,
+.nav-dd.open .nav-dd-toggle {
+  background: var(--chip-hover);
+  color: var(--ink);
+}
+
+.nav-dd-caret {
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 200ms ease;
+}
+
+.nav-dd.open .nav-dd-caret { transform: rotate(225deg) translateY(-2px); }
+
+.nav-dd-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  min-width: 250px;
+  padding: 6px 0;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 32px rgba(11, 11, 12, 0.12);
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity 200ms ease, transform 200ms ease, visibility 200ms ease;
+}
+
+.nav-dd:hover .nav-dd-menu,
+.nav-dd.open .nav-dd-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dd-menu a {
+  display: block;
+  padding: 10px 18px;
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  white-space: nowrap;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.nav-dd-menu a:hover {
+  background: var(--chip-hover);
+  color: var(--ink);
+}
+
+/* keep menus clear of the nav edge on the right */
+.nav-menu .chip:last-child .nav-dd-menu { left: auto; right: 0; }
+
 .theme-toggle {
   width: 40px;
   height: 40px;
@@ -343,8 +427,8 @@ p { max-width: 68ch; }
   transform: scale(0);
   transition: transform 600ms var(--ease);
 }
-.pill-bloom i:nth-child(1) { background: #0fa8b8; }
-.pill-bloom i:nth-child(2) { background: #6e8bff; transition-delay: 80ms; }
+.pill-bloom i:nth-child(1) { background: #6db944; }
+.pill-bloom i:nth-child(2) { background: #a3d17c; transition-delay: 80ms; }
 .pill-bloom i:nth-child(3) { background: var(--accent); transition-delay: 160ms; }
 
 .pair-label {
@@ -392,7 +476,7 @@ p { max-width: 68ch; }
   padding: 10px 0;
   border-bottom: 1px solid color-mix(in srgb, currentColor 16%, transparent);
 }
-.mobile-menu-inner a[aria-current="page"] { color: #6e8bff; }
+.mobile-menu-inner a[aria-current="page"] { color: #85bf55; }
 
 /* ---- hero ------------------------------------------------------------------ */
 
@@ -738,7 +822,12 @@ html:not(.js) .wipe-img { aspect-ratio: 21 / 9; }
   padding-bottom: var(--gap-band-bottom);
 }
 .band-head .eyebrow { margin-bottom: clamp(1.25rem, 2.5vw, 2rem); }
-.band-inner .display-sm { max-width: 18ch; }
+/* wide enough that band titles never spill onto a third line; balance keeps
+   the two lines even instead of a long first line */
+.band-inner .display-sm {
+  max-width: 26ch;
+  text-wrap: balance;
+}
 
 .circle-btn {
   flex-shrink: 0;
@@ -961,16 +1050,7 @@ html:not(.js) .wipe-img { aspect-ratio: 21 / 9; }
   margin-bottom: clamp(1rem, 2vw, 1.5rem);
 }
 .icon-badge svg { width: 20px; height: 20px; }
-.icon-badge::after {
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: var(--accent);
-}
+.icon-badge::after { display: none; }
 
 .product-cell h3 {
   font-size: 1.1875rem;
@@ -1087,7 +1167,7 @@ html:not(.js) .wipe-img { aspect-ratio: 21 / 9; }
   padding: var(--gap-band-top) clamp(1.5rem, 3vw, 3rem) var(--gap-band-bottom) var(--pad);
 }
 .faq-band-head .eyebrow { margin-bottom: clamp(1.25rem, 2.5vw, 2rem); }
-.faq-band-head .display-sm { max-width: 14ch; }
+.faq-band-head .display-sm { max-width: 26ch; text-wrap: balance; }
 .faq-band-inner .faq {
   display: flex;
   flex-direction: column;
@@ -1171,10 +1251,10 @@ html:not(.js) .wipe-img { aspect-ratio: 21 / 9; }
 .field {
   background: var(--field-bg);
   color: var(--field-ink);
-  --accent-ink: #6e8bff;
+  --accent-ink: #85bf55;
   transition: background-color 280ms ease, color 280ms ease;
 }
-[data-theme="dark"] .field { --accent-ink: #2f5bff; }
+[data-theme="dark"] .field { --accent-ink: #3d7419; }
 .field section { border-top: 0; }
 .field footer { border-top: 1px solid var(--field-line); }
 .field ::selection { background: var(--accent); color: #fff; }
@@ -1190,7 +1270,7 @@ html:not(.js) .wipe-img { aspect-ratio: 21 / 9; }
   padding: var(--gap-band-top) clamp(1.5rem, 3vw, 3rem) var(--gap-band-bottom) var(--pad);
 }
 .contact-band-head .eyebrow { margin-bottom: clamp(1.25rem, 2.5vw, 2rem); }
-.contact-band-head .display-sm { max-width: 14ch; }
+.contact-band-head .display-sm { max-width: 26ch; text-wrap: balance; }
 .contact-lede {
   margin-top: clamp(1.5rem, 3vw, 2.25rem);
   color: var(--field-soft);
@@ -1431,7 +1511,6 @@ html:not(.js) .wipe-img { aspect-ratio: 21 / 9; }
   .stat-cell { border-left: 0; border-top: 1px solid var(--line); padding: 1.25rem var(--pad); }
   .stat-cell:first-child { border-top: 0; padding-top: 0; }
   .stat-cell:last-child { padding-bottom: 0.75rem; }
-  .band-inner .display-sm { max-width: 14ch; }
 }
 
 /* ---- reduced motion ---------------------------------------------------------------------- */

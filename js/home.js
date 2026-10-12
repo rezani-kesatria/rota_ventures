@@ -64,6 +64,45 @@
     });
   }
 
+  /* ---- nav dropdowns (Engineering Solutions / Product Supports) ------------- */
+
+  var navDds = Array.prototype.slice.call(document.querySelectorAll(".nav-dd"));
+
+  function setDropdown(dd, open) {
+    if (!dd) return;
+    dd.classList.toggle("open", open);
+    var btn = dd.querySelector(".nav-dd-toggle");
+    if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  navDds.forEach(function (dd) {
+    var btn = dd.querySelector(".nav-dd-toggle");
+    if (!btn) return;
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var isOpen = dd.classList.contains("open");
+      navDds.forEach(function (other) { setDropdown(other, false); });
+      setDropdown(dd, !isOpen);
+    });
+    dd.addEventListener("click", function (e) {
+      if (e.target.closest(".nav-dd-menu a")) {
+        navDds.forEach(function (other) { setDropdown(other, false); });
+      }
+    });
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".nav-dd")) {
+      navDds.forEach(function (dd) { setDropdown(dd, false); });
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      navDds.forEach(function (dd) { setDropdown(dd, false); });
+    }
+  });
+
   /* ---- FAQ: one open at a time, animated via grid-template-rows --------------- */
 
   var faqItems = Array.prototype.slice.call(document.querySelectorAll(".faq-item"));

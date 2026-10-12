@@ -1048,27 +1048,67 @@ h1, h2, h3, h4 {
   gap: 24px;
 }
 
-/* ---------- Page hero (subpages) ---------- */
+/* ---------- Page hero (subpages) — mirrors the main site hero ---------- */
 
 .page-hero {
-  background: var(--bg-soft);
-  padding: 80px 40px;
+  position: relative;
+  background: transparent;
+  padding: clamp(7rem, 14vh, 10rem) 40px clamp(3rem, 6vw, 5.5rem);
+  text-align: center;
+}
+
+/* dot fields fading in from every edge — one shared dot grid, four edge masks,
+   so the pattern stays seamless where the fields meet */
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(16, 24, 40, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+  -webkit-mask-image:
+    linear-gradient(to right, #000 0%, transparent 38%, transparent 62%, #000 100%),
+    linear-gradient(to bottom, #000 0%, transparent 24%, transparent 76%, #000 100%);
+  mask-image:
+    linear-gradient(to right, #000 0%, transparent 38%, transparent 62%, #000 100%),
+    linear-gradient(to bottom, #000 0%, transparent 24%, transparent 76%, #000 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.page-hero .container-narrow {
+  position: relative;
+  z-index: 1;
 }
 
 .page-hero .badge {
-  margin-bottom: 24px;
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--green-dark);
 }
 
 .page-hero h1 {
-  font-size: 48px;
-  line-height: 64px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  font-size: clamp(2.25rem, 1.2rem + 4.2vw, 4.5rem);
+  line-height: 1.05;
   color: var(--ink);
-  margin-bottom: 24px;
-  max-width: 1000px;
+  margin: 0 auto;
+  max-width: 24ch;
 }
 
 .page-hero .lead {
-  max-width: 838px;
+  margin: clamp(1.5rem, 3vw, 2.5rem) auto 0;
+  max-width: 52ch;
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
 }
 
 /* ---------- Detail rows (product pages) ---------- */
@@ -1501,8 +1541,8 @@ h1, h2, h3, h4 {
   }
   .page-hero h1,
   .cta-band h2 {
-    font-size: 36px;
-    line-height: 46px;
+    font-size: clamp(2.25rem, 1.2rem + 4.2vw, 4.5rem);
+    line-height: 1.05;
   }
   .statement {
     padding: 80px 24px;
@@ -1576,8 +1616,8 @@ h1, h2, h3, h4 {
   .display,
   .page-hero h1,
   .cta-band h2 {
-    font-size: 30px;
-    line-height: 38px;
+    font-size: clamp(2.25rem, 1.2rem + 4.2vw, 4.5rem);
+    line-height: 1.05;
   }
   .benefit-box {
     padding: 24px;

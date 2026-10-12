@@ -1,13 +1,13 @@
 ---
 name: Rota Ventures
-description: Flat hairline-ruled industrial leasing site — white paper, near-black ink, one royal-blue instrument accent, glass nav, pill controls.
+description: Flat hairline-ruled industrial leasing site — white paper, near-black ink, one leaf-green instrument accent, glass nav, pill controls.
 colors:
   paper: "#ffffff"
   ink: "#0b0b0c"
   ink-soft: "#4d525a"
   tone: "#8e939c"
-  accent: "#2f5bff"
-  accent-ink: "#2f5bff"
+  accent: "#44821f"
+  accent-ink: "#44821f"
   line: "#e4e6e9"
   line-strong: "#b9bdc4"
   chip: "#f1f2f4"
@@ -106,7 +106,7 @@ components:
 
 **Creative North Star: "The Instrument Sheet"**
 
-The Rota Ventures home page is one continuous, hairline-ruled sheet of white paper carrying near-black ink. Nothing floats on shadow; nothing glows. Sections are cut apart by 1px full-bleed rules, columns by vertical rules, and the page closes on one continuous dark ink field — contact band, footer, marquee. The single royal blue (#2f5bff) behaves like a measurement instrument: it marks the number, the eyebrow, the dot, the arrow — never a wall of colour.
+The Rota Ventures home page is one continuous, hairline-ruled sheet of white paper carrying near-black ink. Nothing floats on shadow; nothing glows. Sections are cut apart by 1px full-bleed rules, columns by vertical rules, and the page closes on one continuous dark ink field — contact band, footer, marquee. The single leaf green (#44821f) behaves like a measurement instrument: it marks the number, the eyebrow, the dot, the arrow — never a wall of colour.
 
 Density is generous but calm: display type at up to 6rem, stat figures at up to 9.5rem, tall section bands whose height comes from bottom padding, and large breathing room inside full-bleed cells. Controls are pills and perfect circles — nothing else gets a radius. The world is an adaptation of the pinned EcoVolt study (design-guidelines/design-system.json, original design by Irfanaffian for One Week Wonders), tuned to WCAG AA and adjusted by client direction: a glass header bar with a bare logo and a centred menu, single-pill CTAs (no companion circle), and an about split that keeps the eyebrow, the long stat headline, and a stacked proof badge beside the restored stat instrument and before/after chart. The brief's grey second tone #b9bdc4 survives as borders and dark-field secondary text; on white it is replaced by darker greys for text, because #b9bdc4 on white fails contrast at every text size.
 
@@ -116,7 +116,7 @@ Density is generous but calm: display type at up to 6rem, stat figures at up to 
 - One continuous full-bleed sheet: no margins anywhere, 1px rules between sections and columns, content inset by padding only, hard-capped at 1800px.
 - Zero elevation: no shadows, no gradients, anywhere — the header sits on a glass bar (translucency + blur + hairline), not a shadow.
 - Two-tone Space Grotesk 500 display headlines: one deliberate grey drop per headline, never bold, never all-caps.
-- Blue as instrument: accent ink and fills on numbers, eyebrows, arrows, dots, dashes and badges; blue stays the only colour "past zero."
+- Green as instrument: accent ink and fills on numbers, eyebrows, arrows, dots, dashes and badges; green stays the only colour "past zero."
 - Single-pill CTAs; band navigations use ghost circle buttons with a diagonal arrow.
 - Dashed measurement rings with badges overlapping the ring's base by half their own height.
 - One continuous dark field closing the page: contact band, footer, marquee — no rule between them.
@@ -124,12 +124,12 @@ Density is generous but calm: display type at up to 6rem, stat figures at up to 
 
 ## Colors
 
-The palette is paper white, near-black ink, one royal-blue instrument accent, and a ladder of cool greys. Every token is a CSS custom property defined on `:root` in `css/home.css` and re-mapped under `[data-theme="dark"]`; the values below are the light-theme canon and the frontmatter is normative for them. Dark-theme values are recorded in `.impeccable/design.json` (`colorMeta.<token>.darkValue`).
+The palette is paper white, near-black ink, one leaf-green instrument accent, and a ladder of cool greys. Every token is a CSS custom property defined on `:root` in `css/home.css` and re-mapped under `[data-theme="dark"]`; the values below are the light-theme canon and the frontmatter is normative for them. Dark-theme values are recorded in `.impeccable/design.json` (`colorMeta.<token>.darkValue`).
 
 ### Primary
 
-- **Royal Blue / `accent`** (#2f5bff): the single instrument accent. The About eyebrow text, icon-badge dots, filled about badge, ring badges, the after-value marks, selection highlight, focus outlines, caret colour, marquee separators, open-FAQ icon fill. Identical in both themes. Never used as a large background field.
-- **Accent Ink / `accent-ink`** (#2f5bff light / #6e8bff dark): the readable variant of blue reserved for text-scale uses — the About eyebrow, error form status, hovered product links, the current page in the mobile menu. In dark mode it lightens to #6e8bff for contrast on near-black. The `.field` re-scopes it the other way: #6e8bff while the field is dark (light theme), #2f5bff once the field inverts to light in dark mode.
+- **Leaf Green / `accent`** (#44821f): the single instrument accent. The About eyebrow text, icon-badge dots, filled about badge, ring badges, the after-value marks, selection highlight, focus outlines, caret colour, marquee separators, open-FAQ icon fill. Identical in both themes. Never used as a large background field. Sourced from the brand mark's leaf cluster (`logo.png`, #6db944), darkened one step to pass AA as text on white.
+- **Accent Ink / `accent-ink`** (#44821f light / #6db944 dark): the readable variant of green reserved for text-scale uses — the About eyebrow, error form status, hovered product links, the current page in the mobile menu. In dark mode it lifts to the brand leaf #6db944 for contrast on near-black. The `.field` re-scopes it the other way: #85bf55 while the field is dark (light theme), #3d7419 once the field inverts to light in dark mode.
 
 ### Secondary
 
@@ -146,23 +146,23 @@ None. The system deliberately has exactly one hue. Where the brief pinned a grey
 - **Chip / `chip`** (#f1f2f4; dark #17181b) and **Chip Hover / `chip-hover`** (#e7e9ec; dark #202226): reserved hover fills for nav chips; avatar two uses `chip`.
 - **Pill Ink BG / FG / `pill-ink-bg` / `pill-ink-fg`** (#0b0b0c on #ffffff; dark #b9bdc4 on #0b0b0c): the solid "current page" nav pill, every CTA pill, the skip link. In dark mode the solid pill becomes silver. Inside the closing field the pill re-scopes to `field-ink`/`field-bg` so it keeps its silhouette on the field ground.
 - **Field BG / Ink / Soft / Line / `field-bg` / `field-ink` / `field-soft` / `field-line`**: the closing dark field's internal palette. Light theme: #0b0b0c ground, white ink, #b9bdc4 secondary, #26282c internal rules. Dark theme the whole field inverts to #f4f5f7 / #0b0b0c / #4d525a / #dcdfe3.
-- **Bar Before / `bar-before`** (#b9bdc4; dark #3a3d42): the "before" series in the before/after chart — grey, because only the after-value is blue.
+- **Bar Before / `bar-before`** (#b9bdc4; dark #3a3d42): the "before" series in the before/after chart — grey, because only the after-value is green.
 - **Field Logo Filter / `field-logo`**: not a colour but a token — `brightness(0) invert(1)` (knock the footer logo white) in light theme, `brightness(0)` (knock it black) in dark. The footer logo runs through this filter.
 
 ### WCAG AA adaptations (as built)
 
 - **#8e939c at large sizes only.** The brief pinned #b9bdc4 as the headline's second tone; on white it fails AA even at 3:1 large-text. The as-built compromise: display drops use #8e939c (~3.1:1, valid for the ≥24px display sizes it appears at), and #b9bdc4 is demoted to non-text work — borders, the dashed ring. In dark theme `tone` becomes #b9bdc4 on #0b0b0c, which passes easily.
-- **Field-scoped accent ink.** Where blue approaches reading size on dark ground it shifts to #6e8bff (accent-ink) so status text stays ≥4.5:1 on near-black; in dark theme, where the field is light, `.field` returns it to #2f5bff.
+- **Field-scoped accent ink.** Where green approaches reading size on dark ground it shifts to #85bf55 (accent-ink) so status text stays ≥4.5:1 on near-black; in dark theme, where the field is light, `.field` returns it to #3d7419.
 - **Body-secondary at AA body size.** All secondary prose uses `ink-soft` (#4d525a light / #b4b8bf dark), not the tone grey. Process copy, FAQ answers, storyline, captions: all `ink-soft`.
 - Visible focus: 2px `accent` outline, 3px offset, 2px radius, globally on `:focus-visible`. Inside the contact form, fields swap their underline to `accent` instead.
 
 ### Named Rules
 
-**The Blue Past Zero Rule.** Blue is the only colour allowed "past zero" — it marks measured, positive values: the eyebrow, the 55% figure, arrows, dots, badges. Everything else is ink or grey on paper. If a second hue appears, the instrument metaphor is broken.
+**The Green Past Zero Rule.** Green is the only colour allowed "past zero" — it marks measured, positive values: the eyebrow, the 55% figure, arrows, dots, badges. Everything else is ink or grey on paper. If a second hue appears, the instrument metaphor is broken.
 
 **The Large-Text Grey Rule.** `tone` (#8e939c) exists only inside display headlines. Body-scale grey text is always `ink-soft`. The pinned #b9bdc4 never renders as text on light ground — it is a border/rule colour.
 
-**The One Accent Rule.** One hue (#2f5bff/#6e8bff), used on ≤10% of any viewport: the eyebrow, numbers, dots, dashes, one open accordion icon, one filled badge.
+**The One Accent Rule.** One hue (#44821f/#6db944), used on ≤10% of any viewport: the eyebrow, numbers, dots, dashes, one open accordion icon, one filled badge.
 
 ## Typography
 
@@ -249,11 +249,11 @@ Calm, staggered, precise — built on vendored GSAP + ScrollTrigger (reveal chor
 - **Shape:** one full-width fixed bar, 76px tall — `color-mix(in srgb, var(--bg) 72%, transparent)`, `backdrop-filter: blur(16px) saturate(1.4)`, 1px `line` bottom border. Direction-aware: hides on scroll-down past 140px (translateY(−130%)), returns instantly on scroll-up; the glass keeps it legible over any content while stuck.
 - **Anatomy:** bare wordmark (logo 40px tall, no container) on the left; the chip menu **centred** between logo and actions (`flex: 1; justify-content: center`); theme toggle (40px circle, sun/moon swap) + the Contact pill on the right. Burger (40px, two 1.75px bars crossing at 45°) sits left of the logo, hidden above 1080px.
 - **Chips:** 0.875rem/500 in `ink-soft`, 10px×18px padding; hover `chip-hover` + `ink`; the **current page is a solid ink pill** (`pill-ink-bg`/`pill-ink-fg`, silver in dark mode) with `aria-current="page"`.
-- **Mobile:** ≤1080px the menu collapses to a full-screen `#0b0b0c` overlay (fixed palette in both themes) with Space Grotesk display links, hairline separators, current page in #6e8bff, Escape/link-click to close, body scroll locked.
+- **Mobile:** ≤1080px the menu collapses to a full-screen `#0b0b0c` overlay (fixed palette in both themes) with Space Grotesk display links, hairline separators, current page in #85bf55, Escape/link-click to close, body scroll locked.
 
 ### Pill CTA
 - **Shape:** single filled pill (999px, 13px×28px padding, `pill-ink-bg`/`pill-ink-fg`). Label set uppercase with 0.08em tracking. No companion circle, no icon — the label carries it.
-- **Hover/focus:** three circles bloom out from top-centre behind the label — teal `#0fa8b8` → `#6e8bff` → `#2f5bff`, 80ms stagger, 600ms expo-out (OliverZeros/uiverse adaptation; the teal is a client-approved transient hover accent, not a system token) — while the label rolls out through the top and an `aria-hidden` duplicate rolls in from below; text settles white on the accent. On press, Motion springs it to 0.96 scale.
+- **Hover/focus:** three circles bloom out from top-centre behind the label — brand leaf `#6db944` → `#a3d17c` → `#44821f`, 80ms stagger, 600ms expo-out — while the label rolls out through the top and an `aria-hidden` duplicate rolls in from below; text settles white on the accent. On press, Motion springs it to 0.96 scale.
 - **Variants:** `.pair--submit` as the form button (disabled state: 0.5 opacity, no lift). Used four times — nav Contact, hero "How we help", leasing ring CTA, contact-band submit. Inside the closing field the pill re-scopes to `field-ink`/`field-bg` so it keeps its silhouette on the field ground.
 
 ### Circle button (band CTA)
@@ -271,7 +271,7 @@ Calm, staggered, precise — built on vendored GSAP + ScrollTrigger (reveal chor
 
 ### Stat grid + benefit chart
 - **Stat grid:** three equal cells in a hairline-ruled row that **bleeds to the section's top rule and both side edges** (negative margins cancel the column padding; internal `border-left` dividers run from the section rule to the grid's bottom rule) — 55% emissions ↓, 80+ assets, 100% upfront financing. Figures are identical size (Space Grotesk 500, clamp(2.5rem, 4.5vw, 4rem), tabular, `accent-ink` with ink suffix) so the row reads level; captions 0.875rem `ink-soft`, max 22ch. Numbers count up on entry (expo.out, 0.12s per cell); ≤720px the grid stacks to one column with horizontal rules.
-- **Benefit chart:** grouped year-one comparison that sells both leasing benefits — group 1 "Upfront capital": grey 100 (own outright) vs a 3px blue stub labelled RM 0 (lease); group 2 "Emissions index": grey 100 vs blue 45. Legend chips above (10px swatches + `chart-key`), −55% summary right-aligned at bar-base. Whole chart carries `role="img"` + an aria-label stating the data. Bars grow off the baseline in sequence (grey → blue per group, 0/0.15/0.35/0.5s); labels fade in step.
+- **Benefit chart:** grouped year-one comparison that sells both leasing benefits — group 1 "Upfront capital": grey 100 (own outright) vs a 3px green stub labelled RM 0 (lease); group 2 "Emissions index": grey 100 vs green 45. Legend chips above (10px swatches + `chart-key`), −55% summary right-aligned at bar-base. Whole chart carries `role="img"` + an aria-label stating the data. Bars grow off the baseline in sequence (grey → green per group, 0/0.15/0.35/0.5s); labels fade in step.
 
 ### Chips (nav)
 - **Style:** transparent chips on the glass bar; text `ink-soft`; no borders on individual chips.
@@ -288,13 +288,17 @@ Calm, staggered, precise — built on vendored GSAP + ScrollTrigger (reveal chor
 - **Shape:** full-width rows, hairline between items; question in Space Grotesk 500 clamp(1.125rem, 1.5vw, 1.375rem) with a 40px ghost circle carrying a plus sign (two 1.75px bars).
 - **Open state:** the first item ships open; JS enforces one-open-at-a-time. Open icon circle fills `accent` with white glyph, plus rotates flat (320ms); answer text small `ink-soft`, max 62ch. Height animates via `::details-content` (380ms, `@supports` gated) — fully keyboard/native otherwise.
 
+### Leaf page sections (`css/page.css`)
+- All eight inner pages (How It Works, Strategic Leasing, two Engineering Solutions, six Product Supports) share one leaf template: `page-hero` (eyebrow, two-tone H1, lead on the dot grid), full-bleed `band` headings, `insight-grid` (copy and media cells alternating), hairline `values` cells, the `benefit-deck` tab carousel, and five numbered `steps` rows — copy left, decorative line-art SVG panel right (`art-panel`, theme-token strokes: `ln`, `ac`, `fl-ac`, `art-lbl`; panels `aria-hidden`, pulse dies under reduced motion).
+- Every leaf closes with the shared dark field (contact band carrying `#contact`, footer, marquee) and loads `js/page.js`; only the section mix and copy differ per page.
+
 ### Dark field: contact band / footer / marquee
 - **One continuous ink surface** (`field-bg`, `field-ink`) closing the page — no rule between the three regions. Light theme: #0b0b0c ground; dark theme the whole field inverts to #f4f5f7.
 - **Contact band:** two-column grid (1fr / 1fr) mirroring the FAQ band. Left: "Contact" eyebrow, Display SM two-tone headline, lede at 44ch. Right: the form behind a left rule, band-padded (`--gap-band-top` / `--gap-band-bottom`); rows stagger in on the 70ms peer move. `#contact` anchors here — the nav Contact pill lands on the form, not the footer.
 - **Form:** five fields in a two-column grid (message, status line, and submit span both columns; collapses to one column ≤900px) — Name, Email address, Company (optional), Interest (select: Not sure yet / Strategic leasing / An engineering solution / A product support line), "What do you need?" message. Boxed outlined fields: transparent bg, 1px `field-line` border, square corners, 14px×16px padding; placeholders in `field-soft` ("Your full name", "you@company.com", "Your company name", site/equipment prompt); hover `field-soft`; focus turns the full border `accent` with outline suppressed; error border `accent` via inline style. The select trades its arrow for a 10px chevron at right 14px — white on the dark field, black once the field inverts in dark theme — `appearance: none`. Labels 0.8125rem/500 `field-soft`. Local validation writes to a `role="status"` live line; errors in `accent-ink`, success in `field-soft`; submit is the pill CTA (mailto handoff, no backend — company and interest prefill the draft's subject and body).
 - **Footer:** on the dark ink field — 3-column grid (1.5fr / 0.9fr / 1.2fr) — brand blurb with the logo knocked white via `field-logo`, Explore links, Contact address/mail/tel. Column H3s 1rem Space Grotesk. Internal hairlines use `field-line`; legal row sits under one.
 - **Marquee:** display-scale Space Grotesk ticker on the same dark field, accent `·` separators, `aria-hidden="true"`, continuous 26s loop.
-- **Field scoping:** `.field` re-declares `--accent-ink` (#6e8bff while the field is dark in light theme, #2f5bff once it inverts in dark theme) and re-scopes the CTA pill to `field-ink`/`field-bg` — white pill on ink in light theme, ink pill on light in dark theme.
+- **Field scoping:** `.field` re-declares `--accent-ink` (#85bf55 while the field is dark in light theme, #3d7419 once it inverts in dark theme) and re-scopes the CTA pill to `field-ink`/`field-bg` — white pill on ink in light theme, ink pill on light in dark theme.
 
 ## Do's and Don'ts
 
@@ -311,12 +315,12 @@ Calm, staggered, precise — built on vendored GSAP + ScrollTrigger (reveal chor
 - **Don't** add shadows or gradients — zero elevation is doctrine; the header sits on glass, not a shadow.
 - **Don't** put radii on structural blocks; 999px is for pills/circles, 20px only for photo cards, everything else square.
 - **Don't** use `tone` (#8e939c) or `line-strong` (#b9bdc4) as body-scale text on light ground — use `ink-soft` (#4d525a).
-- **Don't** introduce a second hue; blue is the only colour past zero.
+- **Don't** introduce a second hue; green is the only colour past zero.
 - **Don't** set headings in bold or all-caps, or load a second Space Grotesk weight.
 - **Don't** add ornament to a pill CTA (circles, arrows, icons) — the client removed the companion circle; the label is the control.
 - **Don't** put a scroll-triggered `clip-path` on the observed element itself — clip an inner child (`.wipe-img`).
 
 ### Accessibility notes (AA decisions as built)
-- Contrast mapping: body ≥4.5:1 via `ink`/`ink-soft`; display grey drop passes as large text; #b9bdc4 confined to borders/decorative/dark-ground text; blue on dark ground always the #6e8bff variant.
+- Contrast mapping: body ≥4.5:1 via `ink`/`ink-soft`; display grey drop passes as large text; #b9bdc4 confined to borders/decorative/dark-ground text; green on dark ground always the #6db944 variant.
 - Semantics: skip link (pill), landmarks (`nav`/`main`/`footer`), `aria-current` on the live page, `aria-expanded` burger, native `<details>` accordion, `role="status"` form feedback, decorative SVGs `aria-hidden`.
 - Motion: global `:focus-visible` outline; reduced-motion kill switch at both JS and CSS layers; marquee and all scroll choreography disabled under it.

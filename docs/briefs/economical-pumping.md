@@ -2,18 +2,18 @@
 
 ## Overview
 
-`economical-pumping.html` is the third leaf page under the Product Supports group. It presents Rota Ventures' cost-efficient pumping and compression systems to buyers whose decisions hinge on total cost of ownership: municipal water supply, irrigation, building services, industrial process water, HVAC circulation, cooling towers, and general fluid transfer. The page uses the shared Product Supports template — badge-and-H1 hero, image grid, hairline-divided detail rows, partners band, CTA band, footer — with every CTA pointing at the footer contact form.
+`economical-pumping.html` is the third leaf page under the Product Supports group. It presents Rota Ventures' cost-efficient pumping and compression systems to buyers whose decisions hinge on total cost of ownership: municipal water supply, irrigation, building services, industrial process water, HVAC circulation, cooling towers, and general fluid transfer. The page (refit 2026) uses the shared leaf template — eyebrow-and-two-tone-H1 hero, problem band, insight grid, outcome values, five-step delivery rows with line-art panels, applications values, contact band, footer, marquee — with every CTA pointing at the contact band (`#contact`).
 
 ## Goals
 
 - Sell on economics: make the energy case with the page's own numbers — 30–50% power reduction versus fixed-speed systems, ROI typically within 2–3 years.
 - Show breadth through the operating envelope: flow from 1 to 1,000 m³/h, pressure up to 150 bar, up to IE4/IE5 motor efficiency.
 - Differentiate on engineering substance (VFDs, high-efficiency motors, optimized hydraulics) rather than price alone.
-- Conversion goal: drive readers to the footer form (`#contact`) via the "Calculate Your Savings" CTA band — noting the label promises a calculation that is delivered as a conversation, which the page copy should acknowledge.
+- Conversion goal: drive readers to the contact band (`#contact`) — the copy acknowledges the "calculation" is delivered as an audit-and-model conversation.
 
 ## Primary CTA
 
-**Calculate Your Savings**, targeting the footer contact form (`#contact`). The header carries the same destination as "Contact Us". The CTA band uses the standard white-on-ink band.
+**Send message** in the contact band (`#contact`), a mailto handoff with the interest select pre-set to "A product support line". The header carries the same destination as "Contact". There is no separate CTA band; the contact band closes the page like the other refit leaves.
 
 ## Key Messages
 
@@ -27,13 +27,14 @@
 
 | Order | Section | Content summary | Notes |
 |---|---|---|---|
-| 1 | Site header | Logo; nav: Home, How It Works, Strategic Leasing; Engineering Solutions dropdown (2 pages); Product Supports dropdown (6 pages); Contact Us button | Shared chrome on all 11 pages |
-| 2 | Page hero | Badge "Product Supports"; H1 "Economical Pumping & Compression"; lead on reducing power consumption while maintaining high-pressure output | Narrow container |
-| 3 | Image grid | Three photos: industrial pumping equipment, modern pumping technology, industrial compression systems | Hotlinked from Unsplash; two of the three are reused from sibling pages |
-| 4 | Detail rows | Description; Category (Pumping Systems · Compression · Energy Efficiency); Technical Specifications (flow, pressure, motor efficiency, VFD control); Benefits (5 items); Applications; Support Services (5 items) | `detail-list` of six hairline rows; Specifications and Support Services fill the slot a generic "How It Works" row would take |
-| 5 | Partners band | "Trusted by Industry Leaders" with four logos (partner-1, -2, -3, -4) | Dark block; the only Product Supports page showing four logos instead of five |
-| 6 | CTA band | H2 "Reduce Costs Without Compromising Performance"; supporting line on lowering energy bills; "Calculate Your Savings" button | Standard `cta-band` |
-| 7 | Footer | Brand blurb, quick links, address/email/phone, contact form, legal links | Carries the `#contact` anchor |
+| 1 | Site header | Glass nav: burger, wordmark, chips (Home, How It Works, Strategic Leasing), Engineering Solutions dropdown (2 pages), Product Supports dropdown (6 pages, this page `aria-current`), theme toggle, Contact pill | Shared chrome on all 11 pages |
+| 2 | Page hero | Eyebrow "Product Supports"; two-tone H1 "Economical Pumping *& Compression.*"; lead on cutting power, not pressure | Word-rise entrance |
+| 3 | The Problem band + insight grid | Two copy cells ("Fixed speed, wasted energy", "Efficiency as a specification") alternating with two photos | Local images: `engineering-1` (pump skids), `leasing-3` (process line) |
+| 4 | The Outcome values | Three hairline cells: 30–50% less power; IE4/IE5 motor class; 2–3 year payback (with leasing text-link) | The page's own numbers, now display-scale stats |
+| 5 | Delivery band + five steps | 01 Energy audit, 02 System selection, 03 Installation & commissioning, 04 Savings verification, 05 Optimisation & care | Each step copy-left, decorative line-art SVG panel right (power log, duty-point curve, changeover, before/after bars, kWh hold) |
+| 6 | Applications values | Three icon-badge cells: municipal water & irrigation; building services & HVAC; process water & fluid transfer | From the old Applications row |
+| 7 | Contact band | H2 "Cut the power bill, *keep the pressure.*"; five-field form (interest pre-set to "A product support line"); mailto handoff | Carries the `#contact` anchor |
+| 8 | Footer + marquee | Brand blurb, quick links, address/email/phone, legal links; closing marquee ticker | Shared with the other refit pages |
 
 ## SEO
 
@@ -50,21 +51,15 @@
 
 ## Assets
 
-- **Hero grid images (3):** hotlinked from `images.unsplash.com` — a production issue. Localize under `assets/img/products/economical-pumping-1.jpg` through `-3.jpg`.
-- **Image reuse:** `photo-1774019883172-a89730a86500` also leads `portable-water.html`, and `photo-1635277055420-230e79907552` also appears on `biomethane-compression.html`; replace both instances here so no two pages share imagery.
-- **Partner logos (4):** local under `assets/img/` (partner-1, -2, -3, -4). This page uses a different set from its siblings — confirm whether the four-logo band is intended.
+- **Imagery (2):** both local — `assets/img/engineering-1.png` (pump sets on skids) and `assets/img/leasing-3.png` (process line). The old Unsplash hotlinks and their sibling-page reuse are gone.
 - **Logo:** local, `assets/img/logo.png`.
 
 ## Design Notes
 
-Apply the EcoVolt language from `design-guidelines/design-system.json`:
+Implemented in the refit (2026), matching `css/home.css` + `css/page.css`:
 
-- **Two-tone H1:** set "Economical" in the grey second tone and keep "Pumping & Compression" in ink — "<span grey>Economical</span> Pumping & Compression". The qualifier is the value claim, so the grey drop poses the question and the lead answers it; the ink words name the capability. 500 weight, sentence case, tight tracking.
-- **Oversized stat:** this page has the strongest numbers on the site for the two-tone stat device — "30–50%" with the number in accent and "energy saved" in ink, and "2–3 yrs" to ROI, set at display scale beside the hero or above the detail rows.
-- **Before/after chart:** an energy-consumption chart built from the same hairlines and accent (before series sweeping first, after ~300ms later, the saving figure landing last) would make the savings claim visible; it is a recommendation, not existing content.
-- **Image grid:** three large-radius photo cards (~16–26px), upward wipe on entry.
-- **Detail rows:** full-bleed hairline-divided rows — label left, content right; zero elevation.
-- **Benefit icons:** the five Benefits items map to circular line-icon badges with dot indicators (energy savings, TCO, reliability, ROI, flexible operation).
-- **Tall heading band:** a band introducing the specifications — title pinned top, circular icon button far right — fits before the detail list.
-- **CTA pair:** "Calculate Your Savings" as a filled pill plus circular arrow, the circle rolling out from behind the pill.
-- **Dark field:** partners band, footer, and closing marquee as one continuous dark block; partner logos as a tight centred low-opacity cluster.
+- **Two-tone H1:** "Economical Pumping" in ink, "& Compression." in the grey tone.
+- **Oversized stat:** the 30–50% / IE4-IE5 / 2–3 yrs device lives as three hairline value cells, numbers at display scale in accent.
+- **Before/after chart:** realised as a line-art SVG panel in step 04 (Savings verification) — before and after bars with the −30–50% callout.
+- **Steps:** copy left, decorative line-art SVG panel right; panels `aria-hidden`, theme-token strokes.
+- **Contact band:** dark field, five-field form, pill submit with bloom hover; local validation, mailto handoff.

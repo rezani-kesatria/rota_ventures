@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industrial Remote Operations — Rota Ventures</title>
+  <meta name="description" content="Retrofit IoT sensing, SCADA and analytics for legacy motor and piping infrastructure — real-time visibility, predictive maintenance and safer remote operation from one control point.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      try {
+        var t = localStorage.getItem("rv-theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        d.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="nav-glass">
+      <nav class="shell nav-inner" aria-label="Primary">
+        <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+        <a class="wordmark" href="index.html" aria-label="Rota Ventures home">
+          <img src="assets/img/logo.png" alt="Rota Ventures" width="160" height="40">
+        </a>
+        <div class="nav-menu">
+          <a class="chip" href="index.html">Home</a>
+          <a class="chip" href="how-it-works.html">How It Works</a>
+          <a class="chip" href="strategic-leasing.html">Strategic Leasing</a>
+          <div class="chip nav-dd">
+            <button class="nav-dd-toggle" type="button" aria-expanded="false" aria-haspopup="true">Engineering Solutions<span class="nav-dd-caret" aria-hidden="true"></span></button>
+            <div class="nav-dd-menu">
+              <a href="combined-head-power.html">Combined Heat &amp; Power</a>
+              <a href="industrial-remote-operations.html" aria-current="page">Industrial Remote Operations</a>
+            </div>
+          </div>
+          <div class="chip nav-dd">
+            <button class="nav-dd-toggle" type="button" aria-expanded="false" aria-haspopup="true">Product Supports<span class="nav-dd-caret" aria-hidden="true"></span></button>
+            <div class="nav-dd-menu">
+              <a href="biomethane-compression.html">Biomethane Green Compression</a>
+              <a href="portable-water.html">Portable Water &amp; Wastewater</a>
+              <a href="economical-pumping.html">Economical Pumping &amp; Compression</a>
+              <a href="specialized-pumping.html">Specialized Pumping</a>
+              <a href="water-matters.html">Water Matters</a>
+              <a href="specialized-cables.html">Specialized Cables</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Switch colour theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M18.8 5.2l-1.9 1.9M7.1 16.9l-1.9 1.9"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13.5A8 8 0 0 1 10.5 4 8 8 0 1 0 20 13.5Z"/></svg>
+          </button>
+          <a class="pair" href="#contact"><span class="pair-pill"><span class="pill-bloom" aria-hidden="true"><i></i><i></i><i></i></span><span class="pair-label">Contact</span><span class="pair-label" aria-hidden="true">Contact</span></span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="mobile-menu-inner shell" aria-label="All pages">
+      <a href="index.html">Home</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="strategic-leasing.html">Strategic Leasing</a>
+      <a href="combined-head-power.html">Combined Heat &amp; Power</a>
+      <a href="industrial-remote-operations.html" aria-current="page">Industrial Remote Operations</a>
+      <a href="biomethane-compression.html">Biomethane Green Compression</a>
+      <a href="portable-water.html">Portable Water &amp; Wastewater</a>
+      <a href="economical-pumping.html">Economical Pumping &amp; Compression</a>
+      <a href="specialized-pumping.html">Specialized Pumping</a>
+      <a href="water-matters.html">Water Matters</a>
+      <a href="specialized-cables.html">Specialized Cables</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <div class="frame">
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="shell">
+        <p class="eyebrow">Engineering Solutions</p>
+        <h1 class="display-sm">Industrial <em class="tone">Remote Operations.</em></h1>
+        <p class="page-hero-lead">Legacy motor and piping infrastructure retrofitted with sensing, control and analytics — so the plant runs visible, optimised and safer from a single control point.</p>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="problem-title">
+      <div class="band-inner">
+        <div class="band-head">
+          <p class="eyebrow">The Problem</p>
+          <h2 class="display-sm" id="problem-title">Most plants learn the truth <em class="tone">when it stops.</em></h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="insight-grid" aria-label="The remote operations insight in detail">
+      <div class="insight-cell insight-cell--copy">
+        <h3>Running on walk-arounds</h3>
+        <p>Legacy motors, pumps and piping report through clipboard and memory. Readings are hours old by the time they're logged, energy waste stays invisible, and the first true alarm is usually the machine already stopped.</p>
+      </div>
+      <div class="insight-cell insight-cell--media">
+        <figure class="wipe insight-wipe">
+          <img class="wipe-img" src="assets/img/engineering-2.png" alt="Rota Ventures engineer servicing a pumping installation on site" loading="lazy" width="960" height="540">
+        </figure>
+      </div>
+      <div class="insight-cell insight-cell--copy">
+        <h3>The plant, live on one screen</h3>
+        <p>Sensing, control and analytics are retrofitted onto the equipment you already run. Flow, vibration, temperature and power become live numbers — watched, logged and acted on from a single control point, on site or away.</p>
+      </div>
+      <div class="insight-cell insight-cell--media">
+        <figure class="wipe insight-wipe">
+          <img class="wipe-img" src="assets/img/vision-1.png" alt="Engineer reading live plant data on a tablet" loading="lazy" width="2499" height="1666">
+        </figure>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="outcome-title">
+      <div class="band-inner">
+        <div class="band-head">
+          <p class="eyebrow">The Outcome</p>
+          <h2 class="display-sm" id="outcome-title">The plant, <em class="tone">finally legible.</em></h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefit-deck" aria-label="Remote operations outcomes in detail">
+      <div class="benefit-dots">
+        <span class="benefit-progress" aria-hidden="true"></span>
+        <div class="benefit-nav">
+          <button type="button" class="benefit-arrow" data-dir="-1" aria-label="Previous outcome">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+          </button>
+          <button type="button" class="benefit-dot is-active" aria-label="Show outcome 1: Real-time visibility" aria-current="true"></button>
+          <button type="button" class="benefit-dot" aria-label="Show outcome 2: Predictive maintenance"></button>
+          <button type="button" class="benefit-dot" aria-label="Show outcome 3: Energy and asset life"></button>
+          <button type="button" class="benefit-arrow" data-dir="1" aria-label="Next outcome">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="benefit-tabs" role="tablist" aria-label="Remote operations outcomes" aria-orientation="vertical">
+        <button class="benefit-tab is-active" id="benefit-tab-1" role="tab" aria-selected="true" aria-controls="benefit-panel-1">
+          <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2"/></svg></span>
+          <span class="benefit-copy">
+            <span class="benefit-name">Real-time visibility</span>
+            <span class="benefit-desc">Every critical parameter — flow, vibration, temperature, power — reads live from one control point, around the clock, from anywhere.</span>
+          </span>
+        </button>
+        <button class="benefit-tab" id="benefit-tab-2" role="tab" aria-selected="false" aria-controls="benefit-panel-2" tabindex="-1">
+          <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+          <span class="benefit-copy">
+            <span class="benefit-name">Predictive maintenance</span>
+            <span class="benefit-desc">Failures announce themselves early. Analytics flag the drift before it becomes downtime — industry programmes report up to 70% fewer unplanned stoppages.</span>
+          </span>
+        </button>
+        <button class="benefit-tab" id="benefit-tab-3" role="tab" aria-selected="false" aria-controls="benefit-panel-3" tabindex="-1">
+          <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></span>
+          <span class="benefit-copy">
+            <span class="benefit-name">Energy &amp; asset life</span>
+            <span class="benefit-desc">Output tunes against demand automatically, so motors stop burning power the process doesn't need — and equipment run at optimal conditions lasts 20–30% longer.</span>
+          </span>
+        </button>
+      </div>
+      <div class="benefit-panels">
+        <div class="dot-pattern" aria-hidden="true"></div>
+        <figure class="benefit-panel is-active" id="benefit-panel-1" role="tabpanel" aria-labelledby="benefit-tab-1">
+          <img src="assets/img/hero-2.png" alt="Automated handling machinery under live monitoring" loading="lazy" width="1880" height="1253">
+          <figcaption class="benefit-chip">
+            <span class="benefit-chip-label">Live visibility</span>
+            <span class="benefit-chip-value">24/7</span>
+          </figcaption>
+        </figure>
+        <figure class="benefit-panel" id="benefit-panel-2" role="tabpanel" aria-labelledby="benefit-tab-2" hidden>
+          <img src="assets/img/leasing-4.png" alt="Engineer reviewing rotating equipment condition data" loading="lazy" width="1880" height="1253">
+          <figcaption class="benefit-chip">
+            <span class="benefit-chip-label">Unplanned downtime</span>
+            <span class="benefit-chip-value">−70%</span>
+          </figcaption>
+        </figure>
+        <figure class="benefit-panel" id="benefit-panel-3" role="tabpanel" aria-labelledby="benefit-tab-3" hidden>
+          <img src="assets/img/leasing-2.png" alt="Machine tool running at a tuned load" loading="lazy" width="867" height="1300">
+          <figcaption class="benefit-chip">
+            <span class="benefit-chip-label">Asset life</span>
+            <span class="benefit-chip-value">+20–30%</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="delivery-title">
+      <div class="band-inner">
+        <div class="band-head">
+          <p class="eyebrow">Delivery</p>
+          <h2 class="display-sm" id="delivery-title">From walk-arounds <em class="tone">to one screen.</em></h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps" aria-label="The five-step retrofit process">
+      <article class="step">
+        <span class="step-num" aria-hidden="true">01</span>
+        <div class="step-head">
+          <h3>Infrastructure assessment</h3>
+          <p class="step-lead">We map the motors, pumps, piping and control panels you already run, and find what's worth instrumenting.</p>
+          <ul class="step-points">
+            <li>Asset and criticality audit across the plant</li>
+            <li>Existing PLC, panel and SCADA review</li>
+            <li>Baseline measurements of energy and throughput</li>
+          </ul>
+        </div>
+        <div class="step-art" aria-hidden="true">
+          <figure class="art-panel">
+            <figcaption class="art-head">Asset survey <span class="art-dot"></span></figcaption>
+            <svg class="art-svg" viewBox="0 0 320 180" role="presentation" focusable="false">
+              <rect x="24" y="24" width="272" height="132" class="ln"/>
+              <path class="ln" d="M140 24v62M140 100v56M24 100h34M72 100h68"/>
+              <rect x="140" y="24" width="82" height="76" class="room-ac"/>
+              <circle cx="181" cy="62" r="22" class="ac"/>
+              <path class="ac" d="M197 78l24 24"/>
+              <path class="ln-soft" d="M24 12h56M24 8v8M80 8v8"/>
+            </svg>
+          </figure>
+        </div>
+      </article>
+      <article class="step">
+        <span class="step-num" aria-hidden="true">02</span>
+        <div class="step-head">
+          <h3>Sensor deployment</h3>
+          <p class="step-lead">Instrumentation goes onto the assets you already run — no replacement required.</p>
+          <ul class="step-points">
+            <li>Vibration, temperature, pressure and flow sensing</li>
+            <li>Non-invasive mounting wherever the asset allows</li>
+            <li>Coverage prioritised by criticality, not convenience</li>
+          </ul>
+        </div>
+        <div class="step-art" aria-hidden="true">
+          <figure class="art-panel art-panel--grid">
+            <figcaption class="art-head">Instrumented machine <span class="art-dot"></span></figcaption>
+            <svg class="art-svg" viewBox="0 0 320 180" role="presentation" focusable="false">
+              <rect x="52" y="56" width="140" height="80" rx="6" class="ln"/>
+              <circle cx="122" cy="96" r="24" class="ln-soft"/>
+              <path class="fl-ac" d="M122 82l11 20h-22z"/>
+              <path class="ln" d="M52 136v14M192 136v14M24 150h272"/>
+              <circle cx="76" cy="70" r="5" class="fl-ac is-live"/>
+              <circle cx="168" cy="70" r="5" class="fl-ac"/>
+              <circle cx="76" cy="122" r="5" class="fl-ac"/>
+              <circle cx="168" cy="122" r="5" class="ln-soft"/>
+              <path class="ac" d="M76 60a12 12 0 0 1 12-12M168 132a12 12 0 0 1-12 12" stroke-dasharray="2 4"/>
+              <path class="ln" d="M192 96h34"/>
+              <circle cx="244" cy="96" r="18" class="ln"/>
+              <path class="ac" d="M237 96h14" />
+              <path class="ac" d="M244 89v14"/>
+              <path class="ln-soft" d="M262 96h22"/>
+            </svg>
+          </figure>
+        </div>
+      </article>
+      <article class="step">
+        <span class="step-num" aria-hidden="true">03</span>
+        <div class="step-head">
+          <h3>Network integration</h3>
+          <p class="step-lead">A secure path carries readings from the plant floor to the monitoring platform.</p>
+          <ul class="step-points">
+            <li>Industrial network and communications setup</li>
+            <li>Encrypted transmission to the monitoring platform</li>
+            <li>Integration with existing SCADA or historians where present</li>
+          </ul>
+        </div>
+        <div class="step-art" aria-hidden="true">
+          <figure class="art-panel">
+            <figcaption class="art-head">Plant network <span class="art-dot"></span></figcaption>
+            <svg class="art-svg" viewBox="0 0 320 180" role="presentation" focusable="false">
+              <circle cx="160" cy="90" r="22" class="ln"/>
+              <circle cx="160" cy="90" r="8" class="fl-ac is-live"/>
+              <circle cx="60" cy="42" r="10" class="ln-soft"/>
+              <circle cx="60" cy="138" r="10" class="ln-soft"/>
+              <circle cx="260" cy="42" r="10" class="ln-soft"/>
+              <circle cx="260" cy="138" r="10" class="ln-soft"/>
+              <path class="ln-soft" d="M75 49 141 79M75 131 141 101M245 49 179 79M245 131 179 101" stroke-dasharray="3 5"/>
+              <text x="60" y="22" class="art-lbl">LINE 1</text>
+              <text x="60" y="166" class="art-lbl">LINE 2</text>
+              <text x="238" y="22" class="art-lbl">PUMP BAY</text>
+              <text x="242" y="166" class="art-lbl">UTILITIES</text>
+            </svg>
+          </figure>
+        </div>
+      </article>
+      <article class="step">
+        <span class="step-num" aria-hidden="true">04</span>
+        <div class="step-head">
+          <h3>Control upgrade</h3>
+          <p class="step-lead">Legacy panels gain remote operation, alarms and modern diagnostics — enhanced, not replaced.</p>
+          <ul class="step-points">
+            <li>Control panel enhancement and interlock modernisation</li>
+            <li>Remote start, stop and setpoint control</li>
+            <li>Alarm management with escalation paths</li>
+          </ul>
+        </div>
+        <div class="step-art" aria-hidden="true">
+          <figure class="art-panel">
+            <figcaption class="art-head">Control panel <span class="art-dot"></span></figcaption>
+            <svg class="art-svg" viewBox="0 0 320 180" role="presentation" focusable="false">
+              <rect x="72" y="24" width="176" height="132" rx="6" class="ln"/>
+              <rect x="88" y="40" width="144" height="56" class="room-ac"/>
+              <path class="ac" d="M96 84l20-14 16 8 22-20 18 10 24-16 20 8" fill="none" stroke-width="2"/>
+              <circle cx="200" cy="56" r="4" class="fl-ac is-live"/>
+              <path class="ln" d="M88 116h40M88 130h40"/>
+              <circle cx="156" cy="120" r="8" class="ln"/>
+              <circle cx="184" cy="120" r="8" class="ring-ac is-live"/>
+              <rect x="208" y="112" width="24" height="16" rx="3" class="ln-soft"/>
+              <path class="chk" d="M100 122l3 3 5-6"/>
+            </svg>
+          </figure>
+        </div>
+      </article>
+      <article class="step">
+        <span class="step-num" aria-hidden="true">05</span>
+        <div class="step-head">
+          <h3>Analytics &amp; optimisation</h3>
+          <p class="step-lead">Data becomes decisions: predictions, alerts and tuning against demand.</p>
+          <ul class="step-points">
+            <li>Predictive maintenance models on live readings</li>
+            <li>Energy and throughput optimisation</li>
+            <li>Performance reviews with your operations team</li>
+          </ul>
+        </div>
+        <div class="step-art" aria-hidden="true">
+          <figure class="art-panel">
+            <figcaption class="art-head">Live monitoring <span class="art-dot is-live"></span></figcaption>
+            <svg class="art-svg" viewBox="0 0 320 180" role="presentation" focusable="false">
+              <text x="24" y="58" class="art-num">24/7</text>
+              <circle cx="98" cy="46" r="5" class="fl-ac is-live"/>
+              <circle cx="114" cy="46" r="5" class="ln-soft"/>
+              <circle cx="130" cy="46" r="5" class="ln-soft"/>
+              <path class="ln-soft" d="M24 84h272M24 120h272" stroke-dasharray="2 6"/>
+              <path class="fl-soft" d="M24 136l36-10 36 6 36-20 36 8 36-22 36 10 36-20v66H24z"/>
+              <path class="ac" d="M24 136l36-10 36 6 36-20 36 8 36-22 36 10 36-20" fill="none" stroke-width="2"/>
+              <path class="ln-soft" d="M24 142h272"/>
+            </svg>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <section class="band" aria-labelledby="fit-title">
+      <div class="band-inner">
+        <div class="band-head">
+          <p class="eyebrow">Applications</p>
+          <h2 class="display-sm" id="fit-title">Built for <em class="tone">brownfield.</em></h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="values" aria-label="Where remote operations applies">
+      <article class="value-cell">
+        <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5s6 6.4 6 10.3a6 6 0 0 1-12 0C6 9.9 12 3.5 12 3.5Z"/></svg></span>
+        <h3>Water &amp; wastewater</h3>
+        <p>Pump stations, treatment lines and distribution networks spread across more sites than any walk-round schedule can cover.</p>
+      </article>
+      <article class="value-cell">
+        <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3v6l-5.5 9.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3"/><path d="M8.5 3h7M8 15h8"/></svg></span>
+        <h3>Oil, gas &amp; chemical</h3>
+        <p>Hazardous or remote process areas where every unnecessary human entry is a safety exposure and every surprise stoppage is a report.</p>
+      </article>
+      <article class="value-cell">
+        <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 20v-6M12 20V9M17 20v-4"/></svg></span>
+        <h3>Manufacturing &amp; utilities</h3>
+        <p>Motor-heavy lines and plant utilities where one stopped drive stops the whole shift, and energy waste compounds quietly.</p>
+      </article>
+    </section>
+  </main>
+
+  <div class="field">
+    <section class="contact-band" id="contact" aria-labelledby="contact-title">
+      <div class="contact-band-inner">
+        <div class="contact-band-head">
+          <p class="eyebrow">Contact</p>
+          <h2 class="display-sm" id="contact-title">Start a <em class="tone">conversation.</em></h2>
+          <p class="contact-lede">Tell us about your site, your equipment, or the cost that won't move — and we'll come back with the right engineering and leasing structure.</p>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="ff-name">Name</label>
+            <input id="ff-name" type="text" name="name" autocomplete="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-row">
+            <label for="ff-email">Email address</label>
+            <input id="ff-email" type="email" name="email" autocomplete="email" placeholder="you@company.com" required>
+          </div>
+          <div class="form-row">
+            <label for="ff-company">Company <span class="form-optional">Optional</span></label>
+            <input id="ff-company" type="text" name="company" autocomplete="organization" placeholder="Your company name">
+          </div>
+          <div class="form-row">
+            <label for="ff-interest">Interest</label>
+            <select id="ff-interest" name="interest">
+              <option value="">Not sure yet</option>
+              <option value="Strategic leasing">Strategic leasing</option>
+              <option value="An engineering solution" selected>An engineering solution</option>
+              <option value="A product support line">A product support line</option>
+            </select>
+          </div>
+          <div class="form-row form-row--full">
+            <label for="ff-message">What do you need?</label>
+            <textarea id="ff-message" name="message" rows="5" placeholder="Your site, your assets, or the downtime you want gone." required></textarea>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <button class="pair pair--submit" type="submit"><span class="pair-pill"><span class="pill-bloom" aria-hidden="true"><i></i><i></i><i></i></span><span class="pair-label">Send message</span><span class="pair-label" aria-hidden="true">Send message</span></span></button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img class="footer-logo" src="assets/img/logo.png" alt="Rota Ventures" width="143" height="64">
+            <p>We bridge technical necessity and financial flexibility through precision-engineered leasing solutions that preserve your working capital.</p>
+          </div>
+          <nav class="footer-col" aria-label="Quick links">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="strategic-leasing.html">Strategic Leasing</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+              <li><a href="combined-head-power.html">Engineering Solutions</a></li>
+              <li><a href="biomethane-compression.html">Product Supports</a></li>
+            </ul>
+          </nav>
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <ul>
+              <li><address>29, Jalan Perindustrian Suntrack, Off Jalan P1/A, Seksyen 13, 43650 Bandar Baru Bangi, Selangor, Malaysia</address></li>
+              <li><a href="mailto:usaid@rotaventures.com.my">usaid@rotaventures.com.my</a></li>
+              <li><a href="tel:+60122575645">+6012-257 5645</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Rota Ventures. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-seq">Engineering growth <em>·</em> financing reality <em>·</em> sustainable infrastructure <em>·</em> </span>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+  <script src="assets/js/vendor/motion.min.js"></script>
+  <script src="js/page.js"></script>
+</body>
+</html>
