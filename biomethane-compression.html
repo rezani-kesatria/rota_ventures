@@ -13,7 +13,7 @@
       d.classList.add("js");
       try {
         var t = localStorage.getItem("rv-theme");
-        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        if (!t) t = "light";
         d.setAttribute("data-theme", t);
       } catch (e) {}
     })();
