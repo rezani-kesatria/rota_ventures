@@ -675,8 +675,9 @@ html:not(.js) .wipe-img { aspect-ratio: 21 / 9; }
 .stat-num {
   color: var(--accent-ink);
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
-.stat-unit { color: var(--ink); }
+.stat-unit { color: var(--ink); white-space: nowrap; }
 .stat-caption {
   margin-top: 0.75rem;
   font-size: var(--fs-small);
