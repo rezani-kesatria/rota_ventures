@@ -253,9 +253,9 @@
 .value-cell .stat-figure {
   margin-bottom: clamp(1rem, 2vw, 1.5rem);
   font-size: clamp(2.25rem, 1.6rem + 2.6vw, 3.75rem);
+  column-gap: 0.18em;
+  flex-wrap: wrap;
 }
-
-.value-cell .stat-figure .stat-unit { margin-left: 0.18em; }
 
 .value-cell p {
   font-size: var(--fs-small);
@@ -354,6 +354,31 @@
   height: 100%;
   aspect-ratio: auto;
 }
+
+/* insight grid split: copy left · single image right (Product Supports only) ---- */
+
+.insight-grid--split { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+
+.insight-grid--split .insight-cell--copy {
+  justify-content: center;
+  gap: clamp(2rem, 3.5vw, 3.25rem);
+}
+
+.insight-grid--split .insight-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  max-width: 36rem;
+}
+
+.insight-grid--split-flip { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+
+.insight-grid--split-flip .insight-cell--media {
+  order: -1;
+  border-left: 0;
+}
+
+.insight-grid--split-flip .insight-cell--copy { border-left: 1px solid var(--line); }
 
 /* ---- benefit deck: auto-advancing tabs left · visuals right ------------------ */
 
